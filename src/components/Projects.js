@@ -163,7 +163,7 @@ class Project extends React.Component {
         
         return (
             <Tooltip placement='top' title='Github'>
-                <a href={githubLink} target="_blank">
+                <a href={githubLink} target="_blank" rel='noopener noreferrer'>
                     <Button shape='circle' size='small' icon="github" className='white-background primary-color padding-left' onClick={event => {event.stopPropagation();}}/>
                 </a>
             </Tooltip>
@@ -178,7 +178,7 @@ class Project extends React.Component {
 
         return (
             <Tooltip placement='top' title='Devpost'>
-                <a href={devpostLink} target="_blank" className='padding-right padding-left'>
+                <a href={devpostLink} target="_blank" rel='noopener noreferrer' className='padding-right padding-left'>
                     <Button shape='circle' size='small' className='white-background' onClick={event => {event.stopPropagation();}}>
                         <div className='bold-font default-font primary-color'> D </div>
                     </Button>
@@ -195,7 +195,7 @@ class Project extends React.Component {
 
         return (
             <Tooltip placement='top' title='Demo Video'>
-                <a href={videoLink} target="_blank">
+                <a href={videoLink} target="_blank" rel='noopener noreferrer'>
                     <Button shape='circle' size='small' icon="youtube" className='white-background primary-color padding-left' onClick={event => {event.stopPropagation();}}/>
                 </a>
             </Tooltip>
@@ -226,7 +226,7 @@ const ProjectDescription = ({description, award, place, placelink, date, stack, 
         </div>
         <div className='flex-left default-font extra-small-font'>
             <Icon type='environment' className='padding-right primary-color'/>
-                <a style={{textDecoration: 'none', color: 'inherit'}} href={placelink} target='_blank'>
+                <a style={{textDecoration: 'none', color: 'inherit'}} href={placelink} target='_blank' rel='noopener noreferrer'>
                     {place}
                 </a>
         </div>
@@ -242,7 +242,7 @@ const ProjectDescription = ({description, award, place, placelink, date, stack, 
             <Icon type='team' className='padding-right primary-color' />
             {team.map(({name, link}, i) => (
                 <Tag style={{margin: 0, marginLeft: '2px'}} key={`teammate-${i}`}>
-                    <a style={{textDecoration: 'none', color: 'inherit'}} href={link} target='_blank'>
+                    <a style={{textDecoration: 'none', color: 'inherit'}} href={link} target='_blank' rel='noopener noreferrer'>
                         {name}
                     </a>
                 </Tag>

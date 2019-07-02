@@ -43,7 +43,7 @@ const EntryDescription = ({ description, gpa, place, placelink, time, classifica
         <div className='flex-left default-font'>
                 <Icon type='environment' className='padding-right primary-color'/>
                 <Tag style={{fontSize: 'inherit'}}>
-                    <a style={{textDecoration: 'none', color: 'inherit', fontSize: 'inherit'}} href={placelink} target='_blank'>
+                    <a style={{textDecoration: 'none', color: 'inherit', fontSize: 'inherit'}} href={placelink} rel='noopener noreferrer' target='_blank'>
                         {place}
                     </a>
                 </Tag>
@@ -60,6 +60,6 @@ const EntryDescription = ({ description, gpa, place, placelink, time, classifica
                 <Icon type='idcard' className='padding-right primary-color'/>
                 {classification}
         </div>
-        {/*organizations and classwork*/}
+        {/*organizations and classwork and awards maybe scholarships*/}
     </div>
 );
