@@ -128,7 +128,7 @@ export class Projects extends React.Component {
         this.setState({ filteredProjects });
     };
 
-    render() {
+    render() { 
         const { filteredProjects } = this.state;
 
         return (
