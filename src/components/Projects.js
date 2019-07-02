@@ -112,14 +112,13 @@ export class Projects extends React.Component {
         }
     }
 
-    filterProjects = (filter) => {
-        const { projects } = this.state;
-
-        console.log('applying fil ter: ' + filter);
+    filterProjects = (filters) => {
+        console.log('applying filter: ' + filters);
 
         // Notice that when we don't use brackets after the lambda we are using an expression instead of a function so we don't need return statements
         const filteredProjects = projects.filter(project =>
-            project.tags.includes(filter[i]) || JSON.stringify(project).search(filter[i]) !== -1
+            project.tags.some(tag => filters.findIndex(filter => filter === tag) !== -1) || 
+            filters.some(filter => JSON.stringify(project).search(filter) !== -1)
         );
         console.log('filtered projects', filteredProjects);
 
@@ -128,7 +127,7 @@ export class Projects extends React.Component {
         this.setState({ filteredProjects });
     };
 
-    render() { 
+    render() {
         const { filteredProjects } = this.state;
 
         return (
