@@ -17,7 +17,6 @@ export class MainMenu extends React.Component {
   };
 
   handleNameClick = () => {
-      console.log('name clicked');
       this.setState({
         current: this.props.tab,
         visible: this.state.visible
@@ -60,20 +59,20 @@ export class MainMenu extends React.Component {
             onClose={this.onClose}
             visible={this.state.visible}
           >
-            <Menu onClick={this.handleClick} onSelect={this.props.changedSelection} selectedKeys={[this.state.current]} mode="vertical" className='right-align unremovable'>
-                <Menu.Item key="home" className='default-font unweighted-font secondary-color unremovable'>
+            <Menu onClick={this.handleClick} onSelect={this.props.changedSelection} selectedKeys={[this.state.current]} mode="vertical" className='right-align'>
+                <Menu.Item key="home" className='default-font unweighted-font secondary-color'>
                   <Icon type="home" theme='outlined' style={{color: '#76323F'}}/>
                   Home
                 </Menu.Item>
-                <Menu.Item key="education" className='default-font unweighted-font secondary-color unremovable'>
+                <Menu.Item key="education" className='default-font unweighted-font secondary-color'>
                   <Icon type="book" theme='outlined' style={{color: '#76323F'}}/>
                   Education
                 </Menu.Item>
-                <Menu.Item key="work" className='default-font unweighted-font secondary-color unremovable'>
+                <Menu.Item key="work" className='default-font unweighted-font secondary-color'>
                   <Icon type="idcard" theme='outlined' style={{color: '#76323F'}}/>
                   Work Experience
                 </Menu.Item>
-                <Menu.Item key="projects" className='default-font unweighted-font secondary-color unremovable'>
+                <Menu.Item key="projects" className='default-font unweighted-font secondary-color'>
                   <Icon type="code" theme='outlined' style={{color: '#76323F'}}/>
                   Projects
                 </Menu.Item>
