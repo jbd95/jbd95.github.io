@@ -115,7 +115,7 @@ export class Projects extends React.Component {
     filterProjects = (filter) => {
         const { projects } = this.state;
 
-        console.log('applying filter: ' + filter);
+        console.log('applying fil ter: ' + filter);
 
         // Notice that when we don't use brackets after the lambda we are using an expression instead of a function so we don't need return statements
         const filteredProjects = projects.filter(project =>
