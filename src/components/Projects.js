@@ -241,15 +241,19 @@ const ProjectDescription = ({description, award, place, placelink, date, stack, 
         <div className='flex-left default-font extra-small-font'>
             <Icon type='team' className='padding-right primary-color' />
             {team.map(({name, link}, i) => (
-                <Tag style={{margin: 0, marginLeft: '2px'}} key={`teammate-${i}`}>
-                    <a style={{textDecoration: 'none', color: 'inherit'}} href={link} target='_blank' rel='noopener noreferrer'>
-                        {name}
-                    </a>
-                </Tag>
+                <Button key={`team-${i}`} shape='round' target='_blank' href={link} rel='noopener noreferrer' size='small'>
+                    {`${name}`}
+                </Button>
             ))}
         </div>
     </div>
 );
+
+{/*<Tag style={{margin: 0, marginLeft: '2px'}} key={`teammate-${i}`}>
+    <a style={{textDecoration: 'none', color: 'inherit'}} href={link} target='_blank' rel='noopener noreferrer'>
+        {name}
+    </a>
+</Tag>*/}
 
 const Filter = ({onChange}) => (
     <Row type='flex' justify='center'>
