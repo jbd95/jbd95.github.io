@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import 'antd/dist/antd.css'
 import '../fonts/montserrat.css'
-import { Button, Layout, Collapse, Row, Icon, Typography, Col, Card, Input, Empty } from 'antd';
+import { Button, Layout, Collapse, Row, Icon, Typography, Col, Card, Input, Empty, Tooltip } from 'antd';
 import utaIcon from '../images/uta-mavs-icon.png';
 import cseIcon from '../images/uta-cse-icon-crop.png';
 import { MainMenu } from './Menu'
@@ -18,20 +18,25 @@ export class Education extends React.Component {
     utaIcons = {
         logos: [
             {
-                link: 'https://uta.edu/',
-                image: <img src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>
-            },
+                link: 'https://www.uta.edu/engineering/_downloads/degree_plans/2017-se-f.pdf',
+                image: <img src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,
+                tooltip: 'Degree Plan'
+                        
+            }
         ]
     }; 
 
     renderIcons = ({logos}) => (
-        <div>
-            {logos.map(({link, image}, i) => (
-                <Button size='small' shape='circle' key={`icon-${i}`} href={link} target='_blank' rel='noopener noreferrer' onClick={event => event.stopPropagation()}>
-                    {image}
-                </Button>
+        <Row type='flex'>
+            {logos.map(({link, image, tooltip}, i) => (
+                <Tooltip title={tooltip} placement='top' key={`icon-${i}`} >
+                    <Button size='small' shape='circle' href={link} target='_blank' 
+                        rel='noopener noreferrer' onClick={event => event.stopPropagation()} className='horizontal-padding'>
+                        {image}
+                    </Button>
+                </Tooltip>
             ))}
-        </div>
+        </Row>
     );
 
     render() {
