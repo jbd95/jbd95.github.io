@@ -44,12 +44,12 @@ export class Education extends React.Component {
             <Row className='background-color' type='flex' justify='center' style={{flexShrink: '0', paddingTop: '5%'}}>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                 <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>Education</Title>
-                    <Entry 
-                        title={`Bachelor's of Science in Computer Science`}
-                        description='Education Description'
-                        place='The University of Texas at Arlington'
-                        placelink='https://www.uta.edu/uta/'
-                        extra={this.renderIcons(this.utaIcons)} />
+                <Entry 
+                    title={`Bachelor's of Science in Computer Science`}
+                    description='Education Description'
+                    place='The University of Texas at Arlington'
+                    placelink='https://www.uta.edu/uta/'
+                    extra={this.renderIcons(this.utaIcons)} />
                 </Col>
             </Row>
         );
@@ -259,10 +259,10 @@ export class EntryDescription extends React.Component {
     }
 
     filterCourses = (filter) => {
-        filter = filter.currentTarget.value;
+        filter = filter.currentTarget.value.toLowerCase();
         let filteredCourses = this.props.courses.filter((course) => {
            return filter.length === 0 ||
-           JSON.stringify(course).toString().search(filter) !== -1;
+           JSON.stringify(course).toString().toLowerCase().search(filter) !== -1;
        });
     
        filteredCourses = (filteredCourses.length === 0)? [null] : filteredCourses;
