@@ -91,6 +91,11 @@ body {
     background-color: black;
 }
 
+.horizontal-padding-small {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
 .horizontal-padding {
     padding-left: 8px;
     padding-right: 8px;

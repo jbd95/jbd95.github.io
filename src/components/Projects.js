@@ -129,7 +129,7 @@ export class Projects extends React.Component {
             <Row className='background-color' type='flex' justify='center' style={{flexShrink: '0', paddingTop: '5%'}}>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                     <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>My Projects</Title>
-                    <Filter onChange={this.filterProjects}/>
+                    <Filter onChange={this.filterProjects} placeholder='Filter Projects' allTags={allTags} mode='tags'/>
 
                     {filteredProjects.map((project, i) => (
                          (project) ?  <Project key={`project-${i}`} project={project}/> : <Empty style={{paddingTop: '16px'}}/>
@@ -255,9 +255,9 @@ const ProjectDescription = ({description, award, place, placelink, date, stack, 
     </a>
 </Tag>*/}
 
-const Filter = ({onChange}) => (
+export const Filter = ({onChange, placeholder, allTags, mode}) => (
     <Row type='flex' justify='center'>
-        <Select mode='tags' placeholder='Filter Projects' onChange={onChange} style={{width: '50%'}}>
+        <Select mode={mode} placeholder={placeholder} onChange={onChange} style={{width: '50%'}}>
             {allTags.map((tag, i) => <Option key={`${tag}`}>{tag}</Option>)}
         </Select>
         <Button type='primary' icon='search'/>
