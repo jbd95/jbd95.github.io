@@ -3,15 +3,22 @@ import React from 'react';
 import { Icon } from 'antd';
 
 import utaIcon from '../images/uta-mavs-icon.png';
+import heracleiaIcon from '../images/uta-heracleia.png';
+import mactechIcon from '../images/mactech-icon.png';
 
 export const WorkData = [
     {
         title: 'Undergraduate Research Assistant',
+        icon: {
+            link: 'https://heracleia.uta.edu/',
+            image: <img alt='' src={heracleiaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,
+            tooltip: 'Heracleia Website'           
+        },
         entries: [
             {
                 icon: 'environment',
                 text: 'Heracleia Lab @ UTA',
-                link: 'https://heracleia.uta.edu'
+                link: 'https://heracleia.uta.edu/'
             },
             {
                 icon: 'calendar',
@@ -22,7 +29,7 @@ export const WorkData = [
         icons: [
             {
             link: 'https://www.uta.edu/engineering/_downloads/degree_plans/2017-se-f.pdf',
-            image: <img src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,
+            image: <img alt='' src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,
             tooltip: 'Degree Plan',  
             },
         ],
@@ -49,13 +56,11 @@ export const WorkData = [
                 children: [
                     {
                         title: 'PETRA 2019 Conference',
-                        icons: [
-                            {
-                            link: '',
+                        icon: {
+                            link: 'http://petrae.org/',
                             image: <Icon type='link'/>,
-                            tooltip: 'petrae.org',
-                            },
-                        ],
+                            tooltip: 'PETRA Website',
+                        },
                         entries: [
                             {
                                 icon: 'environment',
@@ -64,18 +69,44 @@ export const WorkData = [
                             },
                             {
                                 icon: 'calendar',
-                                text: 'Testing',
+                                text: 'June 5-7, 2019',
                                 link: null
                             }
                         ],
                         description: 'Testing'
-                    }
+                    },
+                    {
+                        title: 'PETRA 2018 Conference',
+                        icon: {
+                            link: 'http://petrae.org/',
+                            image: <Icon type='link'/>,
+                            tooltip: 'PETRA Website',
+                        },
+                        entries: [
+                            {
+                                icon: 'environment',
+                                text: 'Corfu, Greece',
+                                link: null
+                            },
+                            {
+                                icon: 'calendar',
+                                text: 'June 26-29, 2018',
+                                link: null
+                            }
+                        ],
+                        description: 'Testing'
+                    },
                 ]
-            }
+            },
         ]
     },
     {
         title: 'Customer Service Representative',
+        icon: {
+            link: 'https://mactech-solutions.com/',
+            image: <img alt='' src={mactechIcon} style={{maxWidth: '65%', maxHeight: '65%', paddingBottom: '1.5px'}}></img>,
+            tooltip: 'Mactech-Solutions'           
+        },
         entries: [
             {
                 icon: 'environment',
@@ -91,7 +122,7 @@ export const WorkData = [
         icons: [
             {
             link: 'https://www.uta.edu/engineering/_downloads/degree_plans/2017-se-f.pdf',
-            image: <img src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,
+            image: <img alt='' src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,
             tooltip: 'Degree Plan',
             }
         ],         

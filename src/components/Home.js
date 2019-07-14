@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import 'antd/dist/antd.css'
 import '../fonts/montserrat.css'
-import { Layout, Button, Tooltip} from 'antd';
+import { Button, Tooltip} from 'antd';
 
 export class Home extends React.Component {
 

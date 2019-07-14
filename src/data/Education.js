@@ -6,7 +6,7 @@ export const EducationData = [
     {
         icon: {
             link: 'https://www.uta.edu/engineering/_downloads/degree_plans/2017-se-f.pdf',
-            image: <img src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,
+            image: <img alt='' src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,
             tooltip: 'Degree Plan'           
         },
         title: `Bachelor's of Science in Computer Science`,

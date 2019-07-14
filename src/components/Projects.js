@@ -7,7 +7,7 @@ import { ProjectData, ProjectTags } from '../data/Projects';
 
 const { Panel } = Collapse;
 const { Option } = Select;
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 
 export class Projects extends React.Component {
@@ -20,6 +20,20 @@ export class Projects extends React.Component {
         this.state = {
              filteredProjects: ProjectData.slice()
         }
+    }
+
+    searchProjects = (filter) => {
+        filter = filter.toLowerCase();
+
+        let filteredProjects = ProjectData.filter((project) => {
+            return (filter.length === 0 || JSON.stringify(project).toLowerCase().toString().search(filter) !== -1);
+        })
+
+        filteredProjects = (filteredProjects.length === 0)? [null] : filteredProjects;
+
+        this.setState({
+            filteredProjects
+        });
     }
 
     filterProjects = (filters) => {
@@ -42,7 +56,7 @@ export class Projects extends React.Component {
             <Row className='background-color' type='flex' justify='center' style={{flexShrink: '0', paddingTop: '5%'}}>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                     <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>My Projects</Title>
-                    <Filter onChange={this.filterProjects} placeholder='Filter Projects' allTags={ProjectTags} mode='tags'/>
+                    <Filter onChange={this.filterProjects} onSearch={this.searchProjects} placeholder='Filter Projects' allTags={ProjectTags} mode='tags'/>
 
                     {filteredProjects.map((project, i) => (
                          (project) ?  <Project key={`project-${i}`} project={project}/> : <Empty style={{paddingTop: '16px'}}/>
@@ -77,7 +91,7 @@ class Project extends React.Component {
         return (
             <Tooltip placement='top' title='Github'>
                 <a href={githubLink} target="_blank" rel='noopener noreferrer'>
-                    <Button shape='circle' size='small' icon="github" className='white-background primary-color padding-left' onClick={event => {event.stopPropagation();}}/>
+                    <Button shape='circle' size='small' icon="github" className='white-background primary-color padding-left-small' onClick={event => {event.stopPropagation();}}/>
                 </a>
             </Tooltip>
         )
@@ -91,7 +105,7 @@ class Project extends React.Component {
 
         return (
             <Tooltip placement='top' title='Devpost'>
-                <a href={devpostLink} target="_blank" rel='noopener noreferrer' className='padding-right padding-left'>
+                <a href={devpostLink} target="_blank" rel='noopener noreferrer' className='padding-right-small padding-left-small'>
                     <Button shape='circle' size='small' className='white-background' onClick={event => {event.stopPropagation();}}>
                         <div className='bold-font default-font primary-color'> D </div>
                     </Button>
@@ -109,7 +123,7 @@ class Project extends React.Component {
         return (
             <Tooltip placement='top' title='Demo Video'>
                 <a href={videoLink} target="_blank" rel='noopener noreferrer'>
-                    <Button shape='circle' size='small' icon="youtube" className='white-background primary-color padding-left' onClick={event => {event.stopPropagation();}}/>
+                    <Button shape='circle' size='small' icon="youtube" className='white-background primary-color padding-left-small' onClick={event => {event.stopPropagation();}}/>
                 </a>
             </Tooltip>
         )
@@ -162,9 +176,9 @@ const ProjectDescription = ({description, award, place, placelink, date, stack, 
     </div>
 );
 
-export const Filter = ({onChange, placeholder, allTags, mode}) => (
+export const Filter = ({onChange, onSearch, placeholder, allTags, mode}) => (
     <Row type='flex' justify='center'>
-        <Select mode={mode} placeholder={placeholder} onChange={onChange} style={{width: '50%'}}>
+        <Select mode={mode} placeholder={placeholder} onChange={onChange} onSearch={onSearch} style={{width: '50%'}}>
             {allTags.map((tag, i) => <Option key={`${tag}`}>{tag}</Option>)}
         </Select>
         <Button type='primary' icon='search'/>

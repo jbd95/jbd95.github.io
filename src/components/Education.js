@@ -2,19 +2,12 @@ import React from 'react';
 import '../App.css';
 import 'antd/dist/antd.css'
 import '../fonts/montserrat.css'
-import { Button, Layout, Collapse, Row, Icon, Typography, Col, Card, Input, Empty, Tooltip } from 'antd';
-import cseIcon from '../images/uta-cse-icon-crop.png';
-import { MainMenu } from './Menu'
-import Column from 'antd/lib/table/Column';
-import { strict } from 'assert';
-import Search from 'antd/lib/input/Search';
+import { Button, Collapse, Row, Icon, Typography, Col, Card, Input, Empty, Tooltip } from 'antd';
 
-import { Display } from './Display';
-import { EducatonData, EducationData } from '../data/Education'
+import { EducationData } from '../data/Education'
 
-const { Header, Content, Footer } = Layout;
 const { Panel } = Collapse;
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 export class Education extends React.Component {
     
@@ -66,6 +59,7 @@ export class EntryDescription extends React.Component {
 
     filterCourses = (filter) => {
         filter = filter.currentTarget.value.toLowerCase();
+
         let filteredCourses = this.props.courses.filter((course) => {
            return filter.length === 0 ||
            JSON.stringify(course).toString().toLowerCase().search(filter) !== -1;

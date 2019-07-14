@@ -2,14 +2,11 @@ import React from 'react';
 import '../App.css';
 import 'antd/dist/antd.css'
 import '../fonts/montserrat.css'
-import { PageHeader, Layout, Button, Input, Steps, Icon, Tooltip, Divider, Row, Col, Typography, Collapse, Card } from 'antd';
-import { MainMenu } from './Menu'
-import { Filter } from './Projects'
+import { Icon, Row, Col, Typography, Collapse, Card } from 'antd';
 
 import { WorkData } from '../data/Work'
 import { Display } from './Display'
 
-const { Header, Content, Footer } = Layout;
 const { Title } = Typography;
 const { Panel } = Collapse;
 

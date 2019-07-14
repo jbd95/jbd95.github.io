@@ -46,6 +46,12 @@ class App extends React.Component {
                 tab: tab
               })
           break;
+          default:
+              this.setState({
+                body: <Home/>,
+                tab: tab
+              })
+          break;
       }
   }
 
