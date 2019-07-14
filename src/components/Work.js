@@ -2,42 +2,67 @@ import React from 'react';
 import '../App.css';
 import 'antd/dist/antd.css'
 import '../fonts/montserrat.css'
-import { PageHeader, Layout, Button, Input, Steps, Icon, Tooltip, Divider } from 'antd';
+import { PageHeader, Layout, Button, Input, Steps, Icon, Tooltip, Divider, Row, Col, Typography, Collapse, Card } from 'antd';
 import { MainMenu } from './Menu'
+import { Filter } from './Projects'
+
+import { WorkData } from '../data/Work'
+import { Display } from './Display'
+
 const { Header, Content, Footer } = Layout;
-
-
-
+const { Title } = Typography;
+const { Panel } = Collapse;
 
 export class Work extends React.Component {
 
     render () {
     return (
-        <div className='center-screen'>
-            <div className='bold-font large-font default-font secondary-color'>
-            James Brady
+            <div>
+                <Row className='background-color' type='flex' justify='center' style={{flexShrink: '0', paddingTop: '5%'}}>
+                <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
+                    <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>Work Experience</Title>
+                    {WorkData.map((work, i) => (
+                        <Display {...work} key={`work-${i}`}/>
+                    ))}
+                </Col>
+            </Row>
             </div>
-
-            <div className='flex'>
-                <Tooltip placement='bottom' title='Github'>
-                    <a style={{position: 'relative', left: '0%'}} className='horizontal-padding' href= {"https://github.com/jbd95"} target="_blank" rel='noopener noreferrer'>
-                        <Button shape="circle" icon="github" style={{backgroundColor: '#76323F', color: 'white'}}/>
-                    </a>
-                </Tooltip>
-                <Tooltip placement='bottom' title='LinkedIn'>
-                <a style={{position: 'relative', left: '0%'}} className='horizontal-padding' href= {"https://www.linkedin.com/in/james-brady-aa67a2151/"} target="_blank" rel='noopener noreferrer'>
-                    <Button shape="circle" icon="linkedin" style={{backgroundColor: '#76323F', color: 'white'}}/>
-                </a>
-                </Tooltip>
-                <Tooltip placement='bottom' title='Devpost'>
-                    <a style={{position: 'relative', left: '0%'}} className='horizontal-padding' href= {"https://devpost.com/jbd95"} target="_blank" rel='noopener noreferrer'>
-                        <Button shape="circle" style={{backgroundColor: '#76323F'}}>
-                        <div className='bold-font default-font white-color'> D </div>
-                        </Button>
-                    </a>
-                </Tooltip>
-            </div>
-        </div>
         );
     }
 }
+
+const WorkEntry = (props) => (
+    <Collapse defaultActiveKey={['1']} expandIconPosition={'right'} accordion style={{width: '100%', maxWidth: '600px', marginTop: '16px'}}>   
+    <Panel header={props.position} key='1' className='default-font small-font' style={{maxWidth: '600px'}}>
+        <div>
+            <div className='flex-left default-font extra-small-font'> {props.description} </div>
+            <div className='flex-left default-font extra-small-font'>
+                <Icon type='environment' className='padding-right primary-color'/>
+                <a style={{textDecoration: 'none', color: 'inherit', fontSize: 'inherit'}} href={props.link} rel='noopener noreferrer' target='_blank'>
+                    {props.location}
+                </a>
+            </div>
+            <div className='flex-left default-font extra-small-font'>
+                <Icon type='calendar' className='padding-right primary-color'/>
+                {props.time}
+            </div>
+            {(props.extras) ? props.extras.map((category, i) => (
+                <Collapse expandIconPosition={'right'} bordered={false} style={{width: '100%', maxWidth: '600px', marginTop: '16px'}}>   
+                <Panel header={category.title} key='1' className='default-font extra-small-font' style={{maxWidth: '600px'}}>
+                        {category.children.map((current, i) => (
+                            <Card title={current.title}>
+                                <div className='flex-left default-font extra-small-font'> {current.description} </div>
+                                <div className='flex-left default-font extra-small-font'>
+                                    <Icon type='calendar' className='padding-right primary-color'/>
+                                    {current.time}
+                                </div>
+                            </Card>
+                        ))}
+                </Panel>
+                </Collapse>
+            ))
+                : <div/>}
+        </div>
+    </Panel>
+    </Collapse>
+)
