@@ -24,6 +24,11 @@ export const WorkData = [
                 icon: 'calendar',
                 text: 'November 2017 - Present',
                 link: null
+            },
+            {
+                icon: 'code',
+                text: 'Unity, C#, Python, Javascript',
+                link: null
             }
         ],
         icons: [
@@ -33,17 +38,18 @@ export const WorkData = [
             tooltip: 'Degree Plan',  
             },
         ],
-        description: 'Testing Description',
+        description: `I assist PHD students with their research in the area of Human-Computer Interaction. 
+        I have developed software for various projects involving robotics, serious games, and wearable systems.`,
         extras: [
             {
                 title: 'Publications',
                 children: [
                     {
-                        title: 'My First Paper',
+                        title: 'Towards a robot-based multimodal framework to assess the impact of fatigue on user behavior and performance:a pilot study ',
                         entries: [
                             {
                                 icon: 'calendar',
-                                text: 'July',
+                                text: '',
                                 link: null
                             }
                         ],
@@ -57,9 +63,9 @@ export const WorkData = [
                     {
                         title: 'PETRA 2019 Conference',
                         icon: {
-                            link: 'http://petrae.org/',
+                            link: 'http://www.petrae.org/docs/Petra19_program.pdf',
                             image: <Icon type='link'/>,
-                            tooltip: 'PETRA Website',
+                            tooltip: 'Conference Program',
                         },
                         entries: [
                             {
@@ -71,16 +77,16 @@ export const WorkData = [
                                 icon: 'calendar',
                                 text: 'June 5-7, 2019',
                                 link: null
-                            }
+                            },
                         ],
-                        description: 'Testing'
+                        description: `I presented a poster paper titled "A Wearable System for Unobtrusive Mood Detection."`
                     },
                     {
                         title: 'PETRA 2018 Conference',
                         icon: {
-                            link: 'http://petrae.org/',
+                            link: 'http://www.petrae.org/docs/Petra18_program.pdf',
                             image: <Icon type='link'/>,
-                            tooltip: 'PETRA Website',
+                            tooltip: 'Conference Program',
                         },
                         entries: [
                             {
@@ -94,7 +100,7 @@ export const WorkData = [
                                 link: null
                             }
                         ],
-                        description: 'Testing'
+                        description: `I helped present a poster titled "A Human Robot Interaction Framework for Robotic Motor Skill Learning."`
                     },
                 ]
             },
@@ -126,7 +132,7 @@ export const WorkData = [
             tooltip: 'Degree Plan',
             }
         ],         
-        description: 'Testing Description',
+        description: 'My roles included greeting customers, answering phones, and helping customers fix software and hardware issues with their Apple Devices. I performed diagnostic tests, data transfers, and part replacements.',
         extras: null
     },
 ];
