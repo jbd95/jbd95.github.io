@@ -5,7 +5,7 @@ import '../fonts/montserrat.css'
 import { Button, Collapse, Row, Icon, Typography, Col, Card, Input, Empty, Tooltip } from 'antd';
 
 import { EducationData } from '../data/Education'
-import { FadeAnimation } from './Animations';
+import { FadeAnimation, QueueAnimation } from './Animations';
 
 const { Panel } = Collapse;
 const { Title } = Typography;
@@ -125,7 +125,8 @@ export class EntryDescription extends React.Component {
                         </Panel>
                         <Panel header={'Completed Major-Related Courses'} key='3' className='default-font extra-small-font' style={{maxWidth: '600px'}}>
                             <Filter onChange={this.filterCourses} placeholder='Search Courses'/>
-                            {filteredCourses.map((course, i) => (
+                            
+                            <QueueAnimation children={filteredCourses.map((course, i) => (
                                 (course)? 
                                 <Card title={course.name} key={`course-${i}`} hoverable className='default-font extra-small-font' 
                                 extra={<Button href={course.parentlink + encodeURI((`${course.number}. ${course.name}`).replace(' ', '+'))} 
@@ -142,7 +143,7 @@ export class EntryDescription extends React.Component {
                                 </Card>
                             :
                                 <Empty style={{paddingTop: '16px'}}/>
-                            ))}
+                            ))}/>
                         </Panel>
                     </Collapse>
                 </div>
