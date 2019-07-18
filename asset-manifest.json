@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.d8c4d78c.chunk.css",
-    "main.js": "/static/js/main.45d7a8b3.chunk.js",
-    "main.js.map": "/static/js/main.45d7a8b3.chunk.js.map",
+    "main.css": "/static/css/main.6cc00583.chunk.css",
+    "main.js": "/static/js/main.27ed9abf.chunk.js",
+    "main.js.map": "/static/js/main.27ed9abf.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.41a373cd.chunk.css": "/static/css/2.41a373cd.chunk.css",
-    "static/js/2.020e432a.chunk.js": "/static/js/2.020e432a.chunk.js",
-    "static/js/2.020e432a.chunk.js.map": "/static/js/2.020e432a.chunk.js.map",
+    "static/css/2.46439c26.chunk.css": "/static/css/2.46439c26.chunk.css",
+    "static/js/2.940794c8.chunk.js": "/static/js/2.940794c8.chunk.js",
+    "static/js/2.940794c8.chunk.js.map": "/static/js/2.940794c8.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.75f4241c6c61ba083df2eab00cb8d456.js": "/precache-manifest.75f4241c6c61ba083df2eab00cb8d456.js",
+    "precache-manifest.262cb65ffb4279e50d962bf27e55693d.js": "/precache-manifest.262cb65ffb4279e50d962bf27e55693d.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.41a373cd.chunk.css.map": "/static/css/2.41a373cd.chunk.css.map",
-    "static/css/main.d8c4d78c.chunk.css.map": "/static/css/main.d8c4d78c.chunk.css.map",
+    "static/css/2.46439c26.chunk.css.map": "/static/css/2.46439c26.chunk.css.map",
+    "static/css/main.6cc00583.chunk.css.map": "/static/css/main.6cc00583.chunk.css.map",
     "static/media/uta-heracleia.png": "/static/media/uta-heracleia.bf615ff3.png"
   }
 }
