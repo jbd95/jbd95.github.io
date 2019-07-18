@@ -7,6 +7,7 @@
     --default-font-first: 'Montserrat';
     --default-font-second: 'sans-serif';
     --linkedin-color: #4875B4;
+    --devpost-color: #3ACCE6;
 }
 
 body {
@@ -98,6 +99,14 @@ body {
 
 .linkedin-background {
     background-color: var(--linkedin-color);
+}
+
+.devpost-color {
+    color: var(--devpost-color);
+}
+
+.devpost-background {
+    background-color: var(--devpost-color);
 }
 
 .horizontal-padding-small {

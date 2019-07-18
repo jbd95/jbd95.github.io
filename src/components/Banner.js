@@ -82,15 +82,15 @@ export class Banner extends React.Component {
                 >
                 <BgElement
                     key="bg"
-                    className="bg black-background"
+                    className="bg devpost-background"
                 />
                 <TweenOne className="banner-user-title" animation={{ y: 30, opacity: 0, type: 'from' }}>
-                    See my hackathon projects on
+                    See my hackathon wins on
                 </TweenOne>
                 <TweenOne className="banner-user-text" 
                     animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
                 >
-                    <Button shape='round' href={Links.devpost} rel='noopener noreferrer' target="_blank">
+                    <Button shape='round' href={Links.devpost} rel='noopener noreferrer' target="_blank" className='devpost-color'>
                         Devpost
                     </Button>
                 </TweenOne>
