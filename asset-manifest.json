@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.73d244eb.chunk.css",
-    "main.js": "/static/js/main.9a189792.chunk.js",
-    "main.js.map": "/static/js/main.9a189792.chunk.js.map",
+    "main.css": "/static/css/main.6b7f9bf2.chunk.css",
+    "main.js": "/static/js/main.9c45528a.chunk.js",
+    "main.js.map": "/static/js/main.9c45528a.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
     "static/css/2.41a373cd.chunk.css": "/static/css/2.41a373cd.chunk.css",
     "static/js/2.020e432a.chunk.js": "/static/js/2.020e432a.chunk.js",
     "static/js/2.020e432a.chunk.js.map": "/static/js/2.020e432a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.05503fda17d20899ae75650f72617c99.js": "/precache-manifest.05503fda17d20899ae75650f72617c99.js",
+    "precache-manifest.cb4507cf7c4b611a559d3f961fc732fb.js": "/precache-manifest.cb4507cf7c4b611a559d3f961fc732fb.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.41a373cd.chunk.css.map": "/static/css/2.41a373cd.chunk.css.map",
-    "static/css/main.73d244eb.chunk.css.map": "/static/css/main.73d244eb.chunk.css.map",
+    "static/css/main.6b7f9bf2.chunk.css.map": "/static/css/main.6b7f9bf2.chunk.css.map",
     "static/media/uta-heracleia.png": "/static/media/uta-heracleia.bf615ff3.png"
   }
 }
