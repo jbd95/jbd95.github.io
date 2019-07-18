@@ -10,7 +10,7 @@ export const ProjectData = [
             stack: 'Backend: NodeJS + Express on AWS Lightsail; Frontend: Javascript + React; Database: GCP Firestore',
             team: [ 
             {
-                name: 'Robert Brady TESTING4156787899',
+                name: 'Robert Brady',
                 link: 'https://github.com/r0bert123/'
             },        
             {
