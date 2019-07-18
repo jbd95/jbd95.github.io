@@ -98,9 +98,12 @@ export class EntryDescription extends React.Component {
                     <Collapse expandIconPosition={'right'} bordered={false} style={{width: '100%', maxWidth: '600px', marginTop: '16px'}}>   
                         <Panel header={'Awards'} key='1' className='default-font extra-small-font' style={{maxWidth: '600px'}}>
                                 {this.props.awards.map(({name, date, link}, i) => (
-                                    <Button key={`award-${i}`} shape='round' target='_blank' href={link} rel='noopener noreferrer' size='small'>
-                                        {`${name} - ${date}`}
-                                    </Button>
+                                    <div className='flex-left default-font extra-small-font;' key={`award-${i}`}>
+                                        <a style={{textDecoration: 'none', color: 'inherit', fontSize: 'inherit'}} href={link} rel='noopener noreferrer' target='_blank'>
+                                            <Icon type='link' className='padding-right primary-color'/>
+                                            {`${name} ${date}`}
+                                        </a>
+                                    </div>
                                 ))}
                         </Panel>
                         <Panel header={'Organizations'} key='2' className='default-font extra-small-font' style={{maxWidth: '600px'}}>
@@ -149,7 +152,7 @@ export class EntryDescription extends React.Component {
 
 export const Filter = ({onChange, placeholder}) => (
     <Row type='flex' justify='center' style={{paddingBottom: '8px'}}>
-        <Input placeholder={placeholder} onChange={onChange} style={{width: '50%'}} allowClear/>
+        <Input placeholder={placeholder} onChange={onChange} style={{width: 'auto'}} allowClear/>
         <Button type='primary' icon='search'/>
     </Row>
 );

@@ -43,8 +43,8 @@ export class Display extends React.Component {
                     {(this.props.extras) ? this.props.extras.map((category, i) => (
                         <Collapse expandIconPosition={'right'} bordered={false} style={{width: '100%', maxWidth: '600px', marginTop: '16px'}}>   
                         <Panel header={category.title} key='1' className='default-font extra-small-font' style={{maxWidth: '600px'}}>
-                                {category.children.map((current, i) => (
-                                    <Card title={current.title} extra={this.renderIcons(current.icon)}>
+                                {(category.children)? category.children.map((current, i) => (
+                                    <Card title={current.title} extra={this.renderIcons(current.icon)} key={`child-${i}`}>
                                         {(current.description)? <div className='flex-left default-font extra-small-font'> {current.description} </div> : <div/>}
                     
                                         {current.entries.map(({ icon, text, link }, i) => (
@@ -56,7 +56,17 @@ export class Display extends React.Component {
                                             </div>
                                         ))}
                                     </Card>
-                                ))}
+                                )) : null}
+                                {(category.type === 'list')? category.entries.map(({icon, text, link}, i) => (
+                                    <div className='flex-left default-font extra-small-font;' key={`extra-child-${i}`}>
+                                        <a style={{textDecoration: 'none', color: 'inherit', fontSize: 'inherit'}} href={link} rel='noopener noreferrer' target='_blank'>
+                                            <Icon type={icon} className='padding-right primary-color'/>
+                                            {text}
+                                        </a>
+                                    </div>
+                                ))
+                                
+                                : null}
                         </Panel>
                         </Collapse>
                     ))

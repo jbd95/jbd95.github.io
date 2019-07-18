@@ -42,20 +42,25 @@ export const WorkData = [
         I have developed software for various projects involving robotics, serious games, and wearable systems.`,
         extras: [
             {
+                type: 'list',
                 title: 'Publications',
-                children: [
-                    {
-                        title: 'Towards a robot-based multimodal framework to assess the impact of fatigue on user behavior and performance:a pilot study ',
-                        entries: [
-                            {
-                                icon: 'calendar',
-                                text: '',
-                                link: null
-                            }
-                        ],
-                        description: 'Description for my first paper that was submitted earlier this year'
-                    }
-                ]
+                entries: [
+                        {
+                            icon: 'link',
+                            text: 'Towards a robot-based multimodal framework to assess the impact of fatigue on user behavior and performance: a pilot study',
+                            link: 'https://dl.acm.org/citation.cfm?id=3322776'
+                        },
+                        {
+                            icon: 'link',
+                            text: 'A Review of Wearable Heart Rate Sensors in Research',
+                            link: 'https://dl.acm.org/citation.cfm?id=3321550'
+                        },
+                        {
+                            icon: 'link',
+                            text: 'A Human Robot Interaction Framework for Robotic Motor Skill Learning',
+                            link: 'https://dl.acm.org/citation.cfm?id=3197790'
+                        },
+                    ],
             },
             {
                 title: 'Presentations',

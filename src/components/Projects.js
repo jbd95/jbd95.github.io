@@ -144,31 +144,31 @@ class Project extends React.Component {
 
 const ProjectDescription = ({description, award, place, placelink, date, stack, team}) => (
     <div>
-        <div className='flex-left default-font extra-small-font'>
+        <div className='flex-left default-font extra-small-font vertical-margin'>
             {description}
         </div>
         <div className='flex-left default-font extra-small-font'>
             <Icon type='fire' className='padding-right primary-color'/>
                 {award}
         </div>
-        <div className='flex-left default-font extra-small-font'>
+        <div className='flex-left default-font extra-small-font vertical-margin'>
             <Icon type='environment' className='padding-right primary-color'/>
                 <a style={{textDecoration: 'none', color: 'inherit'}} href={placelink} target='_blank' rel='noopener noreferrer'>
                     {place}
                 </a>
         </div>
-        <div className='flex-left default-font extra-small-font'>
+        <div className='flex-left default-font extra-small-font vertical-margin'>
             <Icon type='calendar' className='padding-right primary-color'/>
             {date}
         </div>
-        <div className='flex-left default-font extra-small-font'>
+        <div className='flex-left default-font extra-small-font vertical-margin'>
             <Icon type='code' className='padding-right primary-color'/>
             {stack}
         </div>
-        <div className='flex-left default-font extra-small-font'>
+        <div className='flex-left flex-wrap default-font extra-small-font vertical-margin'>
             <Icon type='team' className='padding-right primary-color' />
             {team.map(({name, link}, i) => (
-                <Button key={`team-${i}`} shape='round' target='_blank' href={link} rel='noopener noreferrer' size='small'>
+                <Button key={`team-${i}`} shape='round' target='_blank' href={link} rel='noopener noreferrer' className='horizontal-margin' size='small'>
                     {`${name}`}
                 </Button>
             ))}

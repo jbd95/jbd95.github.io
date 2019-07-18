@@ -117,6 +117,14 @@ body {
     padding-right: 4px;
 }
 
+.horizontal-margin {
+    margin: 0 2px;
+}
+
+.vertical-margin {
+    margin: 2px 0;
+}
+
 .flex {
     display: flex;
     flex: 1;
@@ -146,6 +154,10 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 .ant-tabs-nav .ant-tabs-tab-active {
