@@ -14,7 +14,7 @@ export class Display extends React.Component {
 
        return ( 
         <Row type='flex'>
-            <Tooltip title={tooltip} placement='top'>
+            <Tooltip title={tooltip} placement='top' className='hidden-small'>
                 <Button size='small' shape='circle' href={link} target='_blank' 
                     rel='noopener noreferrer' onClick={event => event.stopPropagation()} className='horizontal-padding'>
                     {image}
@@ -27,7 +27,7 @@ export class Display extends React.Component {
     render() {
         return (
             <Collapse defaultActiveKey={['1']} expandIconPosition={'right'} accordion style={{width: '100%', maxWidth: '600px', marginTop: '16px'}}>   
-            <Panel header={this.props.title} key='1' className='default-font small-font' style={{maxWidth: '600px'}} extra={this.renderIcons(this.props.icon)}>
+            <Panel header={this.props.title} key='1' className='default-font extra-small-font bold-font' style={{maxWidth: '600px'}} extra={this.renderIcons(this.props.icon)}>
                 <div>
                     {(this.props.description)? <div className='flex-left default-font extra-small-font'> {this.props.description} </div> : <div/>}
                     

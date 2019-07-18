@@ -14,7 +14,7 @@ export class Work extends React.Component {
     render () {
     return (
             <div>
-                <Row className='background-color' type='flex' justify='center' style={{flexShrink: '0', paddingTop: '5%'}}>
+                <Row className='background-color' type='flex' justify='center' className='top-title' style={{flexShrink: '0'}}>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                     <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>Work Experience</Title>
                     {WorkData.map((work, i) => (

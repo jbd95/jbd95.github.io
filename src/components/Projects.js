@@ -53,7 +53,7 @@ export class Projects extends React.Component {
 
         const { filteredProjects } = this.state;
         return (
-            <Row className='background-color' type='flex' justify='center' style={{flexShrink: '0', paddingTop: '5%'}}>
+            <Row className='background-color' type='flex' justify='center' style={{flexShrink: '0'}} className='top-title'>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                     <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>My Projects</Title>
                     <Filter onChange={this.filterProjects} onSearch={this.searchProjects} placeholder='Filter Projects' allTags={ProjectTags} mode='tags'/>
@@ -167,11 +167,13 @@ const ProjectDescription = ({description, award, place, placelink, date, stack, 
         </div>
         <div className='flex-left flex-wrap default-font extra-small-font vertical-margin'>
             <Icon type='team' className='padding-right primary-color' />
-            {team.map(({name, link}, i) => (
-                <Button key={`team-${i}`} shape='round' target='_blank' href={link} rel='noopener noreferrer' className='horizontal-margin' size='small'>
-                    {`${name}`}
-                </Button>
-            ))}
+            <div className='flex-left flex-wrap default-font extra-small-font'>
+                {team.map(({name, link}, i) => (
+                    <Button key={`team-${i}`} shape='round' target='_blank' href={link} rel='noopener noreferrer' className='all-margin' size='small'>
+                        {`${name}`}
+                    </Button>
+                ))}
+            </div>
         </div>
     </div>
 );

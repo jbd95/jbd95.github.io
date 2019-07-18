@@ -125,6 +125,10 @@ body {
     margin: 2px 0;
 }
 
+.all-margin {
+    margin: 2px 2px;
+}
+
 .flex {
     display: flex;
     flex: 1;
@@ -207,8 +211,14 @@ body {
     line-height: normal;
 }
 
+.hidden-small {
+    display: initial;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
+
+    .hidden-small { display: none}
+    .top-title { padding-top: calc(5% + 32px);}
 }
 
 .fill-screen {
@@ -228,6 +238,10 @@ body {
 .header {
     height: 100%;
     background-color: var(--background-color);
+}
+
+.top-title {
+    padding-top: calc(5% + 16px);
 }
 
 .ant-btn-primary {

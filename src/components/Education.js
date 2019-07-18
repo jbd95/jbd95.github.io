@@ -13,7 +13,7 @@ export class Education extends React.Component {
     
     renderIcons = ({link, image, tooltip}) => (
         <Row type='flex'>
-            <Tooltip title={tooltip} placement='top'>
+            <Tooltip title={tooltip} placement='top' className='hidden-small'>
                 <Button size='small' shape='circle' href={link} target='_blank' 
                     rel='noopener noreferrer' onClick={event => event.stopPropagation()} className='horizontal-padding'>
                     {image}
@@ -24,7 +24,7 @@ export class Education extends React.Component {
 
     render() {
         return (
-            <Row className='background-color' type='flex' justify='center' style={{flexShrink: '0', paddingTop: '5%'}}>
+            <Row className='background-color' type='flex' justify='center' className='top-title' style={{flexShrink: '0'}}>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                 <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>Education</Title>
 
@@ -40,7 +40,7 @@ export class Education extends React.Component {
 };
 
 const Entry = (props) => (
-    <Collapse expandIconPosition={'right'} defaultActiveKey={['1']} accordion style={{width: '100%', maxWidth: '600px', marginTop: '16px'}}>   
+    <Collapse expandIconPosition={'right'} defaultActiveKey={['1']} accordion style={{width: '100%', maxWidth: '600px', marginTop: '16px'}} className='default-font extra-small-font'>   
         <Panel header={props.title} key='1' className='default-font extra-small-font' style={{maxWidth: '600px'}} extra={props.extra}>
             <EntryDescription {...props} />
         </Panel>
@@ -152,7 +152,7 @@ export class EntryDescription extends React.Component {
 
 export const Filter = ({onChange, placeholder}) => (
     <Row type='flex' justify='center' style={{paddingBottom: '8px'}}>
-        <Input placeholder={placeholder} onChange={onChange} style={{width: 'auto'}} allowClear/>
+        <Input placeholder={placeholder} onChange={onChange} style={{ minWidth: '50%', width: '50%', maxWidth: '60%'}} allowClear/>
         <Button type='primary' icon='search'/>
     </Row>
 );
