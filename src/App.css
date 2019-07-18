@@ -254,3 +254,7 @@ body {
     top: 1%;
     left: 1%;
 }
+
+.rounded-corners {
+    border-radius: 25px;
+}

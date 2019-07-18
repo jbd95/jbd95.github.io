@@ -19,7 +19,6 @@ class App extends React.Component {
   };
 
   changeTab = (tab) => {
-      console.log(tab);
       switch(tab.key)
       {
           case 'home':

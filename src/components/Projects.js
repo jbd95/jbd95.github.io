@@ -3,6 +3,8 @@ import "antd/dist/antd.css"
 import { Collapse, Button, Tooltip, Icon, Col, Select, Typography, Row, Empty } from 'antd';
 import '../App.css';
 
+import { QueueAnimation, FadeAnimation } from './Animations'
+
 import { ProjectData, ProjectTags } from '../data/Projects';
 
 const { Panel } = Collapse;
@@ -53,16 +55,17 @@ export class Projects extends React.Component {
 
         const { filteredProjects } = this.state;
         return (
+            <FadeAnimation children={
             <Row className='background-color' type='flex' justify='center' style={{flexShrink: '0'}} className='top-title'>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                     <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>My Projects</Title>
                     <Filter onChange={this.filterProjects} onSearch={this.searchProjects} placeholder='Filter Projects' allTags={ProjectTags} mode='tags'/>
 
-                    {filteredProjects.map((project, i) => (
-                         (project) ?  <Project key={`project-${i}`} project={project}/> : <Empty style={{paddingTop: '16px'}}/>
-                    ))}
+                    <QueueAnimation children={filteredProjects.map((project, i) => (
+                            (project) ?  <Project key={`project-${i}`} project={project}/> : <Empty style={{paddingTop: '16px'}}/>
+                        ))}/>
                 </Col>
-            </Row>
+            </Row>}/>
         )
     }
 };

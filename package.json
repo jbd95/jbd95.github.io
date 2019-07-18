@@ -6,6 +6,8 @@
   "dependencies": {
     "antd": "^3.20.0",
     "gh-pages": "^2.0.1",
+    "rc-animate": "^2.9.2",
+    "rc-queue-anim": "^1.6.12",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0",

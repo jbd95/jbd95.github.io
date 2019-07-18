@@ -6,6 +6,7 @@ import { Row, Col, Typography } from 'antd';
 
 import { WorkData } from '../data/Work'
 import { Display } from './Display'
+import { FadeAnimation } from './Animations';
 
 const { Title } = Typography;
 
@@ -13,7 +14,7 @@ export class Work extends React.Component {
 
     render () {
     return (
-            <div>
+            <FadeAnimation children={
                 <Row className='background-color' type='flex' justify='center' className='top-title' style={{flexShrink: '0'}}>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                     <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>Work Experience</Title>
@@ -21,8 +22,7 @@ export class Work extends React.Component {
                         <Display {...work} key={`work-${i}`}/>
                     ))}
                 </Col>
-            </Row>
-            </div>
+            </Row>}/>
         );
     }
 }

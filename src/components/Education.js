@@ -5,6 +5,7 @@ import '../fonts/montserrat.css'
 import { Button, Collapse, Row, Icon, Typography, Col, Card, Input, Empty, Tooltip } from 'antd';
 
 import { EducationData } from '../data/Education'
+import { FadeAnimation } from './Animations';
 
 const { Panel } = Collapse;
 const { Title } = Typography;
@@ -24,6 +25,7 @@ export class Education extends React.Component {
 
     render() {
         return (
+            <FadeAnimation children={
             <Row className='background-color' type='flex' justify='center' className='top-title' style={{flexShrink: '0'}}>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                 <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>Education</Title>
@@ -34,7 +36,7 @@ export class Education extends React.Component {
                     <Entry {...current} extra={this.renderIcons(current.icon)} key={`education-${i}`}/>
                 ))}
                 </Col>
-            </Row>
+            </Row>}/>
         );
     };
 };
