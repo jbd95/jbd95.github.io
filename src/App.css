@@ -288,11 +288,11 @@ body {
   overflow: hidden;
 }
 .banner-user-elem .banner-user-title{
-  font-size: 32px;
-  top: 40%;
+  font-size: 2rem;
+  bottom: -34%;
 }
 .banner-user-elem .banner-user-text{
-  top: 40%;
+  bottom: -34%;
 }
 .banner-anim-elem .bg{
   width: 100%;

@@ -64,18 +64,13 @@ class App extends React.Component {
   render() {
     return (
       <Layout className='layout'>
-        <Header className='white-background header'>
-          
-          
-        </Header>
-
+        {/*<Header className='white-background header'/>*/}
         <Content className='fill-screen background-color'>
             <div>
             {this.state.body}
             <MainMenu tab={this.state.tab} changedSelection={this.changeTab} homeClicked={this.goHome}></MainMenu>
             </div>
         </Content>
-
         {/*<Footer className='footer'/>*/}
       </Layout>
     );
