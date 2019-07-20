@@ -152,6 +152,23 @@ export class EntryDescription extends React.Component {
     }
 };
 
+export const EducationShort = (props) => (
+    <div className='flex-left default-font extra-small-font'>
+        <div className='flex-left default-font extra-small-font'>
+            <Icon type='read' className='padding-right primary-color'/>
+            {props.gpa}
+        </div>
+        <div className='flex-left default-font extra-small-font'>
+            <Icon type='calendar' className='padding-right primary-color'/>
+            {props.time}
+        </div>
+        <div className='flex-left default-font extra-small-font'>
+            <Icon type='idcard' className='padding-right primary-color'/>
+            {props.classification}
+        </div>
+    </div>
+);
+
 
 export const Filter = ({onChange, placeholder}) => (
     <Row type='flex' justify='center' style={{paddingBottom: '8px'}}>

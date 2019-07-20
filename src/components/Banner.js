@@ -10,7 +10,7 @@ export class Banner extends React.Component {
 
     render(){
         return (
-            <BannerAnim prefixCls="banner-user" autoPlay autoPlaySpeed={5000}>
+            <BannerAnim prefixCls="banner-user" autoPlay autoPlaySpeed={5000} dragPlay={false} arrow={false}>
                 {BannerData.map((current, i) => (
                     <Element prefixCls="banner-user-elem" key={`${i}`}>
                         <BgElement key="bg" className="bg" style={{ background: current.backgroundColor }}/>

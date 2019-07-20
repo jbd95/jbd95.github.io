@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, Icon } from 'antd';
 import TweenOne from 'rc-tween-one';
+import { Link } from './Link';
 
 export class ExpandableButton extends React.Component {
 
@@ -66,7 +67,7 @@ export class ExpandButtonAuto extends React.Component {
         {
             return (<TweenOne animation={{ delay: 300, onStart: this.startExpand, onComplete: this.endExpand }}>
                         <Button shape={(this.state.expanded) ? 'circle' : 'round'} className='horizontal-margin' style={{color: this.props.color}} onPointerEnter={this.enter} onPointerLeave={this.exit} href={this.props.href} rel='noopener noreferrer' target="_blank">
-                            {this.props.extra}
+                            {(this.props.extra) ? this.props.extra : null}
                             {(this.state.expanded) ? null : this.props.text}
                         </Button>
                     </TweenOne>)
@@ -78,3 +79,53 @@ export class ExpandButtonAuto extends React.Component {
                 </TweenOne>)
     }
 }
+
+export class RoundButton extends React.Component {
+    
+    constructor(props)
+    {
+        super(props);
+        this.state = { windowWidth: 0, windowHeight: 0 };
+        console.log(typeof(this.props.icon));
+    }
+
+    componentDidMount() {
+        this.getWindowDimensions();
+        window.addEventListener('resize', this.getWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.getWindowDimensions);
+    }
+
+    getWindowDimensions = () => {
+        this.setState({
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight
+        });
+    }
+
+    render() {
+        return (
+            (this.state.windowWidth > this.props.minWidth) ? ( 
+            (this.props.icon) ? 
+                (<Button shape='round' size='small' icon={this.props.icon} style={{paddingBottom: '5px'}} href={this.props.href} rel='noopener noreferrer' target="_blank">
+                     <Button type='primary' size='small' onClick={this.showDrawer} className='primary-background white-color'>
+                        <Icon type='menu'/>
+                     </Button>
+                     <div className='padding-right'/>
+                     {this.props.text}
+                </Button>)
+            :
+            (<Button shape='round' size='small' style={{paddingBottom: '5px'}} href={this.props.href} rel='noopener noreferrer' target="_blank">
+                <div className='flex-left'>
+                    <img alt='' src={this.props.image} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px'}}/>
+                    <div className='padding-right'/>
+                    {this.props.text}
+                </div>
+            </Button>))
+            :
+            (<Link href={this.props.href} content={this.props.text}/>)
+        )
+    }
+};
