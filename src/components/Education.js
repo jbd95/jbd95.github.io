@@ -10,7 +10,7 @@ import { FadeAnimation, QueueAnimation } from './Animations';
 const { Panel } = Collapse;
 const { Title } = Typography;
 
-export class Education extends React.Component {
+class Education extends React.Component {
     
     renderIcons = ({link, image, tooltip}) => (
         <Row type='flex'>
@@ -176,3 +176,5 @@ export const Filter = ({onChange, placeholder}) => (
         <Button type='primary' icon='search'/>
     </Row>
 );
+
+export default Education;

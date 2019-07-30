@@ -12,7 +12,7 @@ const { Option } = Select;
 const { Title } = Typography;
 
 
-export class Projects extends React.Component {
+class Projects extends React.Component {
 
     state = { filteredProjects: []}
 
@@ -189,3 +189,6 @@ export const Filter = ({onChange, onSearch, placeholder, allTags, mode}) => (
         <Button type='primary' icon='search'/>
     </Row>
 );
+
+
+export default Projects;

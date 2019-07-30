@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Icon } from 'antd';
 import TweenOne from 'rc-tween-one';
 import { Link } from './Link';
+import ResizeableComponent from './ResizeableBase';
 
 export class ExpandableButton extends React.Component {
 
@@ -80,45 +81,19 @@ export class ExpandButtonAuto extends React.Component {
     }
 }
 
-export class RoundButton extends React.Component {
+export class RoundButton extends ResizeableComponent {
     
-    constructor(props)
-    {
-        super(props);
-        this.state = { windowWidth: 0, windowHeight: 0 };
-        console.log(typeof(this.props.icon));
-    }
-
-    componentDidMount() {
-        this.getWindowDimensions();
-        window.addEventListener('resize', this.getWindowDimensions);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.getWindowDimensions);
-    }
-
-    getWindowDimensions = () => {
-        this.setState({
-            windowWidth: window.innerWidth,
-            windowHeight: window.innerHeight
-        });
-    }
-
     render() {
         return (
             (this.state.windowWidth > this.props.minWidth) ? ( 
             (this.props.icon) ? 
-                (<Button shape='round' size='small' icon={this.props.icon} style={{paddingBottom: '5px'}} href={this.props.href} rel='noopener noreferrer' target="_blank">
-                     <Button type='primary' size='small' onClick={this.showDrawer} className='primary-background white-color'>
-                        <Icon type='menu'/>
-                     </Button>
-                     <div className='padding-right'/>
-                     {this.props.text}
+                (<Button shape='round' size='small' icon={this.props.icon} style={{paddingBottom: '5px'}} href={this.props.href} rel='noopener noreferrer' target="_blank" onClick={this.props.onClick}>
+                    {this.props.text}
                 </Button>)
             :
-            (<Button shape='round' size='small' style={{paddingBottom: '5px'}} href={this.props.href} rel='noopener noreferrer' target="_blank">
+            (<Button shape='round' size='small' style={{paddingBottom: '5px'}} href={this.props.href} rel='noopener noreferrer' target="_blank" onClick={this.props.onClick}>
                 <div className='flex-left'>
+                    {this.props.children}
                     <img alt='' src={this.props.image} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px'}}/>
                     <div className='padding-right'/>
                     {this.props.text}

@@ -10,7 +10,7 @@ import { FadeAnimation } from './Animations';
 
 const { Title } = Typography;
 
-export class Work extends React.Component {
+class Work extends React.Component {
 
     render () {
     return (
@@ -26,6 +26,8 @@ export class Work extends React.Component {
         );
     }
 }
+
+export default Work;
 
 /*const WorkEntry = (props) => (
     <Collapse defaultActiveKey={['1']} expandIconPosition={'right'} accordion style={{width: '100%', maxWidth: '600px', marginTop: '16px'}}>   

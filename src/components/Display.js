@@ -1,9 +1,10 @@
 import React from 'react';
 import { Collapse, Icon, Card, Row, Tooltip, Button } from 'antd';
+import ResizeableComponent from './ResizeableBase';
 
 const { Panel } = Collapse;
 
-export class Display extends React.Component {
+export class Display extends  ResizeableComponent {
 
     renderIcons = (icon) => {
 
@@ -13,14 +14,17 @@ export class Display extends React.Component {
         const { link, image, tooltip } = icon;
 
        return ( 
-        <Row type='flex'>
-            <Tooltip title={tooltip} placement='top' className='hidden-small'>
-                <Button size='small' shape='circle' href={link} target='_blank' 
-                    rel='noopener noreferrer' onClick={event => event.stopPropagation()} className='horizontal-padding'>
-                    {image}
-                </Button>
-            </Tooltip>
-        </Row>
+            (this.state.windowWidth > 400) ? 
+                (<Row type='flex'>
+                    <Tooltip title={tooltip} placement='top'>
+                        <Button size='small' shape='circle' href={link} target='_blank' 
+                            rel='noopener noreferrer' onClick={event => event.stopPropagation()} className='horizontal-padding'>
+                            {image}
+                        </Button>
+                    </Tooltip>
+                </Row>)
+            :
+            (null)
         )
     };
 
