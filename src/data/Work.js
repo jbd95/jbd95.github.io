@@ -33,7 +33,7 @@ export const WorkData = [
         ],
         icons: [
             {
-            link: 'https://www.uta.edu/engineering/_downloads/degree_plans/2017-se-f.pdf',
+            link: 'https://www.uta.edu/engineering/_downloads/degree_plans/2017-cs-f.pdf',
             image: <img alt='' src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,
             tooltip: 'Degree Plan',  
             },
@@ -45,7 +45,6 @@ export const WorkData = [
                 type: 'list',
                 title: 'Publications',
                 entries: [
-                    
                         {
                             icon: 'link',
                             text: 'An Intelligent Action Recognition System to Assess Cognitive Behavior for Executive Function Disorder',
