@@ -45,6 +45,12 @@ export const WorkData = [
                 type: 'list',
                 title: 'Publications',
                 entries: [
+                    
+                        {
+                            icon: 'link',
+                            text: 'An Intelligent Action Recognition System to Assess Cognitive Behavior for Executive Function Disorder',
+                            link: 'https://ras.papercept.net/conferences/conferences/CASE19/program/CASE19_ContentListWeb_2.html',
+                        },
                         {
                             icon: 'link',
                             text: 'Towards a robot-based multimodal framework to assess the impact of fatigue on user behavior and performance: a pilot study',
@@ -65,6 +71,27 @@ export const WorkData = [
             {
                 title: 'Presentations',
                 children: [
+                    {
+                        title: 'CASE 2019 Conference',
+                        icon: {
+                            link: 'https://ras.papercept.net/conferences/conferences/CASE19/program/',
+                            image: <Icon type='link'/>,
+                            tooltip: 'Conference Program',
+                        },
+                        entries: [
+                            {
+                                icon: 'environment',
+                                text: 'Vancouver, Canada',
+                                link: null
+                            },
+                            {
+                                icon: 'calendar',
+                                text: 'August 22-26, 2019',
+                                link: null
+                            },
+                        ],
+                        description: `I gave a 20 minute presentation on a paper titled "An Intelligent Action Recognition System to Assess Cognitive Behavior for Executive Function Disorder."`
+                    },
                     {
                         title: 'PETRA 2019 Conference',
                         icon: {
