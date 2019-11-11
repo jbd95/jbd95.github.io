@@ -26,14 +26,14 @@ class Education extends React.Component {
     render() {
         return (
             <FadeAnimation children={
-            <Row className='background-color' type='flex' justify='center' className='top-title' style={{flexShrink: '0'}}>
+            <Row type='flex' justify='center' className='top-title background-color' style={{flexShrink: '0'}}>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                 <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>Education</Title>
 
                 
 
                 {EducationData.map((current, i) => (
-                    <Entry {...current} extra={this.renderIcons(current.icon)} key={`education-${i}`}/>
+                    <Entry {...current} showArrow extra={this.renderIcons(current.icon)} key={`education-${i}`}/>
                 ))}
                 </Col>
             </Row>}/>
@@ -41,9 +41,40 @@ class Education extends React.Component {
     };
 };
 
+export class EducationPopup extends React.Component {
+
+    renderIcons = ({link, image, tooltip}) => (
+        <Row type='flex'>
+            <Tooltip title={tooltip} placement='top' className='hidden-small'>
+                <Button size='small' shape='circle' href={link} icon='book' target='_blank' 
+                    rel='noopener noreferrer' onClick={event => event.stopPropagation()} className='horizontal-padding'>
+                </Button>
+            </Tooltip>
+        </Row>
+    );  
+
+    render() {
+        return (
+            <div>
+                {EducationData.map((current, i) => (
+                    (current.name === this.props.name ? 
+                    <PopupEntry {...current} showArrow={false} extra={this.renderIcons(current.icon)} key={`education-${i}`}/> 
+                    : null)
+                ))}
+            </div>
+        )
+    }
+}
+
+const PopupEntry = (props) => (
+    <Card title={props.title} key='1' showArrow={props.showArrow} className='default-font extra-small-font' style={{maxWidth: '600px', margin: '20px 20px 10px 10px'}} extra={props.extra}>
+        <EntryDescription {...props} />
+    </Card>
+)
+
 const Entry = (props) => (
     <Collapse expandIconPosition={'right'} defaultActiveKey={['1']} accordion style={{width: '100%', maxWidth: '600px', marginTop: '16px'}} className='default-font extra-small-font'>   
-        <Panel header={props.title} key='1' className='default-font extra-small-font' style={{maxWidth: '600px'}} extra={props.extra}>
+        <Panel header={props.title} key='1' showArrow={props.showArrow} className='default-font extra-small-font' style={{maxWidth: '600px'}} extra={props.extra}>
             <EntryDescription {...props} />
         </Panel>
     </Collapse>

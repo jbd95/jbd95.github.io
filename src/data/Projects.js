@@ -1,5 +1,6 @@
 export const ProjectData = [
     {
+        name: 'edunate',
         title: 'Edunate',
         description: {
             description: '📚💵👩‍🏫Succeed in College through micro-donations, peer tutoring and textbook exchange.',
@@ -28,6 +29,7 @@ export const ProjectData = [
         githubLink: 'https://github.com/jbd95/edunate'
     },
     {
+        name: 'meme',
         title: 'MemeRoyale',
         description: {
             description: 'MemeRoyale: The Battle Royale of Memes',
@@ -56,6 +58,7 @@ export const ProjectData = [
         githubLink: 'https://github.com/jbd95/MemeRoyale'
     },
     {
+        name: 'road',
         title: 'Road Rage Unlimited',
         description: {
             description: '🚗⛽🗻Compete against AI players or your friends in this 3D driving game featuring an infinite terrain. Drive around the map to obtain items that give you an edge over your opponents. Unleash your road rage in order to deal damage to your opponents and win the game.',

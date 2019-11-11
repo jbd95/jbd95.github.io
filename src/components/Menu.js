@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu, Icon, Button, Drawer } from 'antd';
 import '../App.css';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export class MainMenu extends React.Component {
   

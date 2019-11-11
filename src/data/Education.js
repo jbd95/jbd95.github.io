@@ -4,6 +4,7 @@ const catalogURL = `https://catalog.uta.edu/search/?P=`;
 
 export const EducationData = [
     {
+        name: 'uta',
         icon: {
             link: 'https://www.uta.edu/engineering/_downloads/degree_plans/2017-cs-f.pdf',
             image: <img alt='' src={utaIcon} style={{width: '60%', height: '62%', maxWidth: '16px', maxHeight: '18px', paddingBottom: '1px'}}></img>,

@@ -5,7 +5,7 @@ import '../fonts/montserrat.css'
 import { Row, Col, Typography } from 'antd';
 
 import { WorkData } from '../data/Work'
-import { Display } from './Display'
+import { Display, DisplayPopup } from './Display'
 import { FadeAnimation } from './Animations';
 
 const { Title } = Typography;
@@ -15,7 +15,7 @@ class Work extends React.Component {
     render () {
     return (
             <FadeAnimation children={
-                <Row className='background-color' type='flex' justify='center' className='top-title' style={{flexShrink: '0'}}>
+                <Row type='flex' justify='center' className='top-title background-color' style={{flexShrink: '0'}}>
                 <Col className='background-color' style={{maxWidth: '98vw', alignSelf: 'center', flexBasis: '600px'}} >
                     <Title style={{color: 'var(--secondary-color)', textAlign: 'center', marginTop: '8px'}}>Work Experience</Title>
                     {WorkData.map((work, i) => (
@@ -23,6 +23,21 @@ class Work extends React.Component {
                     ))}
                 </Col>
             </Row>}/>
+        );
+    }
+}
+
+export class WorkPopup extends React.Component {
+
+    render () {
+    return (
+        <div>
+            {WorkData.map((work, i) => (
+                (work.name === this.props.name ? 
+                    <DisplayPopup {...work} key={`work-${i}`}/>
+                : null)
+            ))}
+        </div>
         );
     }
 }

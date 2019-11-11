@@ -2,7 +2,7 @@ import React from 'react';
 import '../App.css';
 import 'antd/dist/antd.css'
 import '../fonts/montserrat.css'
-import { Button, Typography, Row, Icon, Col, Popover } from 'antd';
+import { Typography, Row, Col } from 'antd';
 import { Banner } from './Banner';
 import { RoundButton } from './ExpandableButton';
 import utaIcon from '../images/uta-icon.png';
@@ -11,21 +11,11 @@ import Links from '../data/Links';
 import { Link } from './Link';
 import ResizeableComponent from './ResizeableBase';
 
-import { EducationData } from '../data/Education';
-
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 export const Space = (props) => (
     <div style={{paddingLeft: props.leftPadding, paddingRight: props.rightPadding}}/>
 );
-
-const content = (
-    <div>
-        <li> HackSMU </li>
-        <li> HackUTD </li>
-        <li> HackHouston </li>
-    </div>
-)
 
 class Home extends ResizeableComponent {
 

@@ -4,6 +4,7 @@
     --primary-color: #76323F; 
     --secondary-color: #565656;
     --background-color: #D7CEC7;
+    --resume-color: #FFFFFF;
     --default-font-first: 'Montserrat';
     --default-font-second: 'sans-serif';
     --linkedin-color: #4875B4;
@@ -45,6 +46,10 @@ body {
     font-size: 2rem;
 }
 
+.resume-title {
+    font-size: 1.5rem;
+}
+
 .small-font {
     font-size: 1.1rem;
 }
@@ -75,6 +80,10 @@ body {
 
 .background-color {
     background-color: var(--background-color);
+}
+
+.resume-color {
+    background-color: var(--resume-color);
 }
 
 .primary-background {

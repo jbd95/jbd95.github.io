@@ -1,6 +1,6 @@
 import React from 'react';
 import "antd/dist/antd.css"
-import { Collapse, Button, Tooltip, Icon, Col, Select, Typography, Row, Empty } from 'antd';
+import { Collapse, Button, Tooltip, Icon, Col, Select, Typography, Row, Empty, Card } from 'antd';
 import '../App.css';
 
 import { QueueAnimation, FadeAnimation } from './Animations'
@@ -141,6 +141,86 @@ class Project extends React.Component {
                   <ProjectDescription {...project.description}/>
               </Panel>
             </Collapse>
+        )
+    }
+};
+
+export class ProjectPopup extends React.Component {
+
+    callback = (key) => {};
+
+    generateButtons = (project) => {
+        console.log("generating buttons");
+        return (
+            <div className='flex'>
+                {this.generateVideo(project)}
+                {this.generateDevpost(project)}
+                {this.generateGithub(project)}
+            </div>
+        )
+    };
+
+    generateGithub = (project) => {
+        const { githubLink } = project;
+
+        if(!githubLink)
+            return null;
+
+        
+        return (
+            <Tooltip placement='top' title='Github'>
+                <a href={githubLink} target="_blank" rel='noopener noreferrer'>
+                    <Button shape='circle' size='small' icon="github" className='white-background primary-color padding-left-small' onClick={event => {event.stopPropagation();}}/>
+                </a>
+            </Tooltip>
+        )
+    }
+
+    generateDevpost = (project) => {
+        const { devpostLink } = project;
+
+        if(!devpostLink)
+            return null;
+
+        return (
+            <Tooltip placement='top' title='Devpost'>
+                <a href={devpostLink} target="_blank" rel='noopener noreferrer' className='padding-right-small padding-left-small'>
+                    <Button shape='circle' size='small' className='white-background' onClick={event => {event.stopPropagation();}}>
+                        <div className='bold-font default-font primary-color'> D </div>
+                    </Button>
+                </a>
+            </Tooltip>
+        )
+    };
+
+    generateVideo = (project) => {
+        const { videoLink } = project;
+
+        console.log(videoLink);
+
+        if(!videoLink)
+            return null;
+
+        return (
+            <Tooltip placement='top' title='Demo Video'>
+                <a href={videoLink} target="_blank" rel='noopener noreferrer'>
+                    <Button shape='circle' size='small' icon="youtube" className='white-background primary-color padding-left-small' onClick={event => {event.stopPropagation();}}/>
+                </a>
+            </Tooltip>
+        )
+    }
+
+    render() {
+        return (
+            <div>
+                {ProjectData.map((project, i) => (
+                    (project.name === this.props.name) ?  
+                        (<Card title={project.title} key='1' extra={this.generateButtons(project)} className='default-font small-font' style={{maxWidth: '600px', margin: '20px 20px 10px 10px'}}>
+                            <ProjectDescription {...project.description}/>
+                        </Card>) : null
+                ))}
+            </div>
+              
         )
     }
 };

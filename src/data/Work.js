@@ -8,6 +8,7 @@ import mactechIcon from '../images/mactech-icon.png';
 
 export const WorkData = [
     {
+        name: 'uta',
         title: 'Undergraduate Research Assistant',
         icon: {
             link: 'https://heracleia.uta.edu/',
@@ -138,6 +139,7 @@ export const WorkData = [
         ]
     },
     {
+        name: 'mactech',
         title: 'Customer Service Representative',
         icon: {
             link: 'https://mactech-solutions.com/',
