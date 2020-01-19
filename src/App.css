@@ -242,7 +242,7 @@ body {
     display: initial;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 
     .hidden-small { display: none}
     .top-title { padding-top: calc(5% + 32px);}

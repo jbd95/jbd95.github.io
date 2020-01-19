@@ -70,6 +70,16 @@ class Projects extends React.Component {
     }
 };
 
+export class ListProjects extends React.Component {
+    render() {
+        return (    
+            <QueueAnimation children={ProjectData.map((project, i) => (
+                                (project) ?  <Project key={`project-${i}`} project={project}/> : <Empty style={{paddingTop: '16px'}}/>
+            ))}/>
+        )
+    }
+}
+
 class Project extends React.Component {
 
     callback = (key) => {};
@@ -136,8 +146,8 @@ class Project extends React.Component {
         const { project} = this.props;
 
         return (
-            <Collapse defaultActiveKey={['1']} onChange={this.callback} expandIconPosition={'right'} accordion style={{width: '100%', maxWidth: '600px', marginTop: '16px'}}>   
-              <Panel header={project.title} key='1' extra={this.generateButtons()} className='default-font small-font' style={{maxWidth: '600px'}}>
+            <Collapse defaultActiveKey={['1']} onChange={this.callback} expandIconPosition={'right'} accordion style={{width: '100%', marginTop: '16px'}}>   
+              <Panel header={project.title} key='1' extra={this.generateButtons()} className='default-font small-font'>
                   <ProjectDescription {...project.description}/>
               </Panel>
             </Collapse>

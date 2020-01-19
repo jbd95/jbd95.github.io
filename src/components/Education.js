@@ -16,7 +16,7 @@ class Education extends React.Component {
         <Row type='flex'>
             <Tooltip title={tooltip} placement='top' className='hidden-small'>
                 <Button size='small' shape='circle' href={link} target='_blank' 
-                    rel='noopener noreferrer' onClick={event => event.stopPropagation()} className='horizontal-padding'>
+                    rel='noopener noreferrer' onClick={event => event.stopPropagation()}>
                     {image}
                 </Button>
             </Tooltip>
@@ -41,13 +41,38 @@ class Education extends React.Component {
     };
 };
 
+export class EducationList extends React.Component {
+    renderIcons = ({link, image, tooltip}) => (
+        <Row type='flex'>
+            <Tooltip title={tooltip} placement='top' className='hidden-small'>
+                <Button size='small' shape='circle' href={link} target='_blank' 
+                    rel='noopener noreferrer' onClick={event => event.stopPropagation()}>
+                    {image}
+                </Button>
+            </Tooltip>
+        </Row>
+    );
+
+    render() {
+        return (
+            <FadeAnimation children={
+                <Col>
+                    {EducationData.map((current, i) => (
+                        <Entry {...current} showArrow extra={this.renderIcons(current.icon)} key={`education-${i}`}/>
+                    ))}
+                </Col>
+            }/>
+        );
+    };
+}
+
 export class EducationPopup extends React.Component {
 
     renderIcons = ({link, image, tooltip}) => (
         <Row type='flex'>
             <Tooltip title={tooltip} placement='top' className='hidden-small'>
                 <Button size='small' shape='circle' href={link} icon='book' target='_blank' 
-                    rel='noopener noreferrer' onClick={event => event.stopPropagation()} className='horizontal-padding'>
+                    rel='noopener noreferrer' onClick={event => event.stopPropagation()}>
                 </Button>
             </Tooltip>
         </Row>
@@ -73,8 +98,8 @@ const PopupEntry = (props) => (
 )
 
 const Entry = (props) => (
-    <Collapse expandIconPosition={'right'} defaultActiveKey={['1']} accordion style={{width: '100%', maxWidth: '600px', marginTop: '16px'}} className='default-font extra-small-font'>   
-        <Panel header={props.title} key='1' showArrow={props.showArrow} className='default-font extra-small-font' style={{maxWidth: '600px'}} extra={props.extra}>
+    <Collapse expandIconPosition={'right'} defaultActiveKey={['1']} accordion style={{width: '100%', marginTop: '16px'}} className='default-font extra-small-font'>   
+        <Panel header={props.title} key='1' showArrow={props.showArrow} className='default-font extra-small-font' extra={props.extra}>
             <EntryDescription {...props} />
         </Panel>
     </Collapse>
@@ -128,8 +153,8 @@ export class EntryDescription extends React.Component {
                     {this.props.classification}
                 </div>
                 <div className='default-font extra-small-font'>
-                    <Collapse expandIconPosition={'right'} bordered={false} style={{width: '100%', maxWidth: '600px', marginTop: '16px'}}>   
-                        <Panel header={'Awards'} key='1' className='default-font extra-small-font' style={{maxWidth: '600px'}}>
+                    <Collapse expandIconPosition={'right'} bordered={false} style={{width: '100%', marginTop: '16px'}}>   
+                        <Panel header={'Awards'} key='1' className='default-font extra-small-font'>
                                 {this.props.awards.map(({name, date, link}, i) => (
                                     <div className='flex-left default-font extra-small-font;' key={`award-${i}`}>
                                         <a style={{textDecoration: 'none', color: 'inherit', fontSize: 'inherit'}} href={link} rel='noopener noreferrer' target='_blank'>
@@ -139,7 +164,7 @@ export class EntryDescription extends React.Component {
                                     </div>
                                 ))}
                         </Panel>
-                        <Panel header={'Organizations'} key='2' className='default-font extra-small-font' style={{maxWidth: '600px'}}>
+                        <Panel header={'Organizations'} key='2' className='default-font extra-small-font'>
                                 {this.props.organizations.map(({name, date, description, position}, i) => (
                                     <Card title={name} key={`org-${i}`} hoverable className='default-font extra-small-font'>
                                         {description}
@@ -154,7 +179,7 @@ export class EntryDescription extends React.Component {
                                     </Card>
                                 ))}
                         </Panel>
-                        <Panel header={'Completed Major-Related Courses'} key='3' className='default-font extra-small-font' style={{maxWidth: '600px'}}>
+                        <Panel header={'Completed Major-Related Courses'} key='3' className='default-font extra-small-font'>
                             <Filter onChange={this.filterCourses} placeholder='Search Courses'/>
                             
                             <QueueAnimation children={filteredCourses.map((course, i) => (

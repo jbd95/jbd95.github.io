@@ -6,7 +6,7 @@ import { Row, Col, Typography } from 'antd';
 
 import { WorkData } from '../data/Work'
 import { Display, DisplayPopup } from './Display'
-import { FadeAnimation } from './Animations';
+import { FadeAnimation, QueueAnimation } from './Animations';
 
 const { Title } = Typography;
 
@@ -23,6 +23,18 @@ class Work extends React.Component {
                     ))}
                 </Col>
             </Row>}/>
+        );
+    }
+}
+
+export class ListWork extends React.Component {
+
+    render () {
+    return (
+            <QueueAnimation children={WorkData.map((work, i) => (
+                <Display {...work} key={`work-${i}`}/>
+                ))}
+            />
         );
     }
 }

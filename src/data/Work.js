@@ -8,6 +8,29 @@ import mactechIcon from '../images/mactech-icon.png';
 
 export const WorkData = [
     {
+        name: 'yelp',
+        title: 'Incoming Software Engineer Intern',
+        icon: {
+            link: 'https://yelp.com/',
+            image: <Icon type='link'/>,
+            tooltip: 'Yelp'           
+        },
+        entries: [
+            {
+                icon: 'environment',
+                text: 'Yelp',
+                link: 'https://yelp.com'
+            },
+            {
+                icon: 'calendar',
+                text: 'Summer 2020',
+                link: null
+            }
+        ],     
+        description: '',
+        extras: null
+    },
+    {
         name: 'uta',
         title: 'Undergraduate Research Assistant',
         icon: {
