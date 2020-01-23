@@ -67,23 +67,37 @@ export class ListWebsite extends React.Component {
                             </Col>
                         <Row align='top' justify='center' type='flex' style={{width: '100%'}}>
                     <Col style={{width: '100%', margin: '0 0 0 0'}}>
-                    <ResumeHeading title='Education'/>
-                        <EducationList/>
-                    <ResumeHeading title='Work Experience'/>
-                        <ListWork/>
-                    <ResumeHeading title='Projects'/>
-                        <ListProjects/>
-                    <ResumeHeading title='Skills'/>
+                      <ResumeHeading title='Summary'/>
+                      <ResumeEntry company='' title={``}
+                        popupCallback={() => this.showPopup(null)} date=''
+                        bullets={
+                        [
+                            `Incoming Software Engineer Intern at Yelp - Summer 2020`,
+                            `Undergraduate Research Assistant co-authored two academic publications`,
+                            `Won first place at HackSMU 2019 and HackHouston 2019`,
+                            `Studying Computer Science with expected graduation of Spring 2021`
+                        ]
+                        }/>
+                        <ResumeHeading title='Skills'/>
                     <ResumeEntry company='' title={``}
                         popupCallback={() => this.showPopup(null)} date=''
                         bullets={
                         [
-                            `C++, C, C#, Unity3D, Python, Blender, Linux, SQL`
+                            `Languages: C#, C++, C, Python, JavaScript, Java, SQL`,
+                            `Frameworks: Unity3D, Express.js`,
+                            `Tools and Platforms: Amazon Web Services (Lightsail, EC2), Blender`,
+                            `Databases: MySQL, Google Firestore, MongoDB, mLab`
                         ]
                         }/>
-                        </Col>
+                      <ResumeHeading title='Work Experience'/>
+                        <ListWork/>
+                      <ResumeHeading title='Projects'/>
+                        <ListProjects/>
+                      <ResumeHeading title='Education'/>
+                        <EducationList/>
+                      </Col>
                     </Row>
-                    </Row>
+                  </Row>
                 </Row>
             </Content>
         </Layout>

@@ -92,6 +92,38 @@ export const EducationData = [
             parentlink: catalogURL
         },
         {
+            name: 'Operating Systems',
+            number: 'CSE 3320',
+            hours: '3',
+            description: `Functions and components of an operating system, 
+            including process synchronization, job scheduling, memory management, 
+            file systems protection, and deadlocks. Related system software, such 
+            as loaders, linkers, assemblers, and windowing systems.`,
+            parentlink: catalogURL
+        },
+        {
+            name: 'Programming Languages',
+            number: 'CSE 3302',
+            hours: '3',
+            description: `Introduction, analysis, and evaluation of the important 
+            concepts found in a variety of programming languages. Formalisms useful 
+            in specifying language syntax and semantics; programming language paradigms 
+            such as algorithmic, functional, logic, and object-oriented.`,
+            parentlink: catalogURL
+        },
+        {
+            name: 'Artifical Intelligence',
+            number: 'CSE 4308',
+            hours: '3',
+            description: `An introduction to the field of artificial intelligence 
+            studying basic techniques such as heuristic search, deduction, learning, 
+            problem solving, knowledge representation, uncertainty reasoning and 
+            symbolic programming languages such as LISP. Application areas may 
+            include intelligent agents, data mining, natural language, machine vision, 
+            planning and expert systems.`,
+            parentlink: catalogURL
+        },
+        {
             name: 'Fundamentals of Software Engineering',
             number: 'CSE 3310',
             hours: '3',

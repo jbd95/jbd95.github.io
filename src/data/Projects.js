@@ -86,7 +86,46 @@ export const ProjectData = [
         devpostLink: null,
         videoLink: null,
         githubLink: null
-    }
+    },
+    {
+        name: 'file-system',
+        title: 'FAT32 File System',
+        description: {
+            description: 'Created a file system where files can be added, deleted, and retrieved',
+            award: null,
+            place: null,
+            placelink: null,
+            date: 'Fall 2019',
+            stack: 'C',
+            team: [ 
+                {
+                    name: 'Andrew Miller',
+                    link: 'https://github.com/TrinityDevelopers',
+                }
+            ]
+        },
+        tags: ['Github', 'School'],
+        devpostLink: null,
+        videoLink: null,
+        githubLink: 'https://github.com/jbd95/FAT32-FileSystem'
+    },
+    {
+        name: 'shell',
+        title: 'CustomShell',
+        description: {
+            description: 'Shell that supports basic commands such as history, listpids, and executing other programs',
+            award: null,
+            place: null,
+            placelink: null,
+            date: 'Fall 2019',
+            stack: 'C',
+            team: null
+        },
+        tags: ['Github', 'School'],
+        devpostLink: null,
+        videoLink: null,
+        githubLink: 'https://github.com/jbd95/CustomShell'
+    },
 ];
 
 export const ProjectTags = ['Hackathon', 'School', 'Github', 'Devpost', 'Demo Video'];
