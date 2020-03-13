@@ -72,7 +72,6 @@ export class ListWebsite extends React.Component {
                         popupCallback={() => this.showPopup(null)} date=''
                         bullets={
                         [
-                            `Incoming Software Engineer Intern at Yelp - Summer 2020`,
                             `Undergraduate Research Assistant co-authored two academic publications`,
                             `Won first place at HackSMU 2019 and HackHouston 2019`,
                             `Studying Computer Science with expected graduation of Spring 2021`

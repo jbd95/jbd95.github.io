@@ -12,7 +12,9 @@ class App extends React.Component {
   
     render() {
       return (
-        <CombinedWebsite minWidth={500}/>
+        <div>
+          <CombinedWebsite minWidth={500}/>
+        </div>
       );
     }
 }
