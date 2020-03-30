@@ -6,6 +6,21 @@ const Links = {
     heracleia: 'http://heracleia.uta.edu/'
 };
 
+export const MenuData = [
+    {
+        icon: 'github',
+        link: 'https://github.com/jbd95'
+    },
+    {
+        icon: 'linkedin',
+        link: 'https://www.linkedin.com/in/james-brady-aa67a2151/'
+    },
+    {
+        icon: 'mail',
+        link: 'mailto:jbrady9559@gmail.com'
+    },
+]
+
 export default Links;
 
 

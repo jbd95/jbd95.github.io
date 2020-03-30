@@ -1,14 +1,16 @@
 @import '~antd/dist/antd.css';
 
 :root {
-    --primary-color: #76323F; 
-    --secondary-color: #565656;
-    --background-color: #D7CEC7;
+    --primary-color: #052F5F; 
+    --secondary-color: #FF6F59;
+    --third-color: #DBD3D8;
+    --background-color: #DBD3D8;
     --resume-color: #FFFFFF;
     --default-font-first: 'Montserrat';
     --default-font-second: 'sans-serif';
     --linkedin-color: #4875B4;
     --devpost-color: #3ACCE6;
+    --menu-height: 47px;
 }
 
 body {
@@ -38,24 +40,8 @@ body {
     font-weight: lighter;
 }
 
-.large-font {
-    font-size: 2.5rem;
-}
-
-.medium-font {
-    font-size: 2rem;
-}
-
 .resume-title {
     font-size: 1.5rem;
-}
-
-.small-font {
-    font-size: 1.1rem;
-}
-
-.extra-small-font {
-    font-size: 1rem;
 }
 
 .default-font {
@@ -88,6 +74,14 @@ body {
 
 .primary-background {
     background-color: var(--primary-color);
+}
+
+.third-background {
+    background-color: var(--third-color);
+}
+
+.third-color {
+    color: var(--third-color);
 }
 
 .white-background {
@@ -310,4 +304,67 @@ body {
   top: 0;
   left: 0;
   overflow: hidden;
+}
+
+/* Start of CSS for v3 of website */
+
+.page-with-menu {
+    height: calc(100vh - var(--menu-height));
+    width: calc(100vw - 16px);
+}
+
+.screen-page {
+    width: calc(100vw - 16px);
+    height: 100vh;
+}
+
+.screen-width {
+    width: calc(100vw - 16px);
+}
+
+.screen-half-height {
+    min-height: 50vh;
+}
+
+.screen-height {
+    height: 100vh;
+}
+
+.fill-height {
+    height: 100%;
+}
+
+.fill-width {
+    width: 100%;
+}
+
+.title {
+    font-size: calc(32px + 2vw);
+}
+
+.sub-title {
+    font-size: calc(24px + 1vw);
+}
+
+.xxlarge-font {
+    font-size: xx-large;
+}
+.xlarge-font {
+    font-size: x-large;
+}
+
+.large-font {
+    font-size: large;
+}
+
+.medium-font {
+    font-size: medium;
+}
+
+.small-font {
+    font-size: small;
+}
+
+.icon-link {
+    font-size: 24px;
 }
