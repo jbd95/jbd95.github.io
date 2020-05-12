@@ -1,3 +1,5 @@
+import Resume from '../data/Resume_Website.pdf'
+
 const Links = {
     github: 'https://github.com/jbd95',
     linkedin: 'https://www.linkedin.com/in/james-brady-aa67a2151/',
@@ -22,6 +24,10 @@ export const MenuData = [
     {
         text: 'D',
         link: 'https://devpost.com/jbd95'
+    },
+    {
+        icon: 'file-pdf',
+        link: Resume
     },
     {
         icon: 'mail',
