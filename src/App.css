@@ -242,8 +242,12 @@ body {
     .top-title { padding-top: calc(5% + 32px);}
 }
 
+.top-margin {
+    margin-top: 16px;
+}
+
 .fill-screen {
-    min-height: 100vh;
+    min-height: calc(100vh - 65px);
     min-width: 100vw;
 }
 
@@ -309,7 +313,7 @@ body {
 /* Start of CSS for v3 of website */
 
 .page-with-menu {
-    height: calc(100vh - var(--menu-height));
+    height: 100vh;
     width: calc(100vw - 16px);
 }
 
@@ -367,4 +371,14 @@ body {
 
 .icon-link {
     font-size: 24px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .desktop-display { display: none}
+}
+
+@media screen and (min-width: 800px) {
+
+    .mobile-display { display: none}
 }

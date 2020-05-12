@@ -16,6 +16,14 @@ export const MenuData = [
         link: 'https://www.linkedin.com/in/james-brady-aa67a2151/'
     },
     {
+        text: 'B',
+        link: 'https://blazeoj.com/u/jbd95'
+    },
+    {
+        text: 'D',
+        link: 'https://devpost.com/jbd95'
+    },
+    {
         icon: 'mail',
         link: 'mailto:jbrady9559@gmail.com'
     },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Button, Row } from 'antd';
 import TweenOne from 'rc-tween-one';
 import { Link } from './Link';
 import ResizeableComponent from './ResizeableBase';
@@ -104,3 +104,11 @@ export class RoundButton extends ResizeableComponent {
         )
     }
 };
+
+export const ImageButton = (props) => {
+    return (
+        <Button shape='round' href={props.href} rel='noopener noreferrer' target="_blank" onClick={props.onClick} style={props.style}>
+            <img alt='' src={props.image} style={{maxWidth: props.maxWidth, maxHeight: props.maxHeight}}/>
+        </Button>
+    )
+}
