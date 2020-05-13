@@ -22,10 +22,6 @@ export const MenuData = [
         link: 'https://blazeoj.com/u/jbd95'
     },
     {
-        text: 'D',
-        link: 'https://devpost.com/jbd95'
-    },
-    {
         icon: 'file-pdf',
         link: Resume
     },
