@@ -266,7 +266,7 @@ body {
 }
 
 .top-title {
-    padding-top: calc(5% + 16px);
+    margin-top: calc(5% + 16px);
 }
 
 .ant-btn-primary {
@@ -381,4 +381,9 @@ body {
 @media screen and (min-width: 800px) {
 
     .mobile-display { display: none}
+}
+
+.ant-btn:hover {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
