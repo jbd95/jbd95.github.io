@@ -2,13 +2,9 @@ import React from 'react';
 import '../App.css';
 import 'antd/dist/antd.css';
 import '../fonts/montserrat.css';
-import { Row, Col, Menu, Card, Avatar, Icon, Popover, PageHeader, Button } from 'antd'
-import MacTechImage from '../images/mactech-icon.png'
-import CSEImage from '../images/uta-heracleia.png'
-import UTAImage from '../images/uta-icon.png'
+import { Row, Icon, PageHeader, Button } from 'antd'
 import { MenuData } from '../data/Links'
-import { Link, A } from './Link';
-import { RoundButton, ImageButton } from './ExpandableButton';
+import { A } from './Link';
 import ResizeableComponent from './ResizeableBase';
 
 const ALink = (props) => {

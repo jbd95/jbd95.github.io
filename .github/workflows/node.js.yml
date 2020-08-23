@@ -21,7 +21,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     
     - name: Install packages
+      if: success()
       run: yarn install
     
     - name: Build and Deploy
+      if: success()
       run: yarn run deploy

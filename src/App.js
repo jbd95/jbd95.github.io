@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
 import './fonts/montserrat.css';
-import ReactGA from 'react-ga';
 //import { GAID } from './secret';
 import { CombinedWebsite } from './components/CombinedWebsite';
 
