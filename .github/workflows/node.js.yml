@@ -24,6 +24,12 @@ jobs:
       if: success()
       run: yarn install
     
-    - name: Build and Deploy
+    - name: Build Project
       if: success()
-      run: yarn run deploy
+      run: yarn run build
+
+    - name: Deploy Site
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
