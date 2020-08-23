@@ -1,20 +1,9 @@
 {
-  "files": {
-    "main.css": "/static/css/main.702a4229.chunk.css",
-    "main.js": "/static/js/main.fc154f34.chunk.js",
-    "main.js.map": "/static/js/main.fc154f34.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.ff8bd605.chunk.css": "/static/css/2.ff8bd605.chunk.css",
-    "static/js/2.f4ddb6fc.chunk.js": "/static/js/2.f4ddb6fc.chunk.js",
-    "static/js/2.f4ddb6fc.chunk.js.map": "/static/js/2.f4ddb6fc.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.128587cb65986319c3fcf90e86bec694.js": "/precache-manifest.128587cb65986319c3fcf90e86bec694.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.ff8bd605.chunk.css.map": "/static/css/2.ff8bd605.chunk.css.map",
-    "static/css/main.702a4229.chunk.css.map": "/static/css/main.702a4229.chunk.css.map",
-    "static/media/Resume_Website.pdf": "/static/media/Resume_Website.6b87657d.pdf",
-    "static/media/uta-heracleia.png": "/static/media/uta-heracleia.bf615ff3.png",
-    "static/media/uta-icon.png": "/static/media/uta-icon.eafaa22f.png"
-  }
+  "main.css": "static/css/main.20d5ed46.css",
+  "main.css.map": "static/css/main.20d5ed46.css.map",
+  "main.js": "static/js/main.97b73074.js",
+  "main.js.map": "static/js/main.97b73074.js.map",
+  "static\\media\\Resume_Website.pdf": "static/media/Resume_Website.c4f4436c.pdf",
+  "static\\media\\uta-heracleia.png": "static/media/uta-heracleia.bf615ff3.png",
+  "static\\media\\uta-icon.png": "static/media/uta-icon.eafaa22f.png"
 }
