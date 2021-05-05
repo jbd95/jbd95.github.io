@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import "antd/dist/antd.css";
 import "../fonts/montserrat.css";
-import { Row, Icon, PageHeader, Button } from "antd";
+import { Row, Icon, Button } from "antd";
 import { MenuData } from "../data/Links";
 import { A } from "./Link";
 import ResizeableComponent from "./ResizeableBase";
