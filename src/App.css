@@ -1,20 +1,20 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
 :root {
-    --primary-color: #052F5F; 
-    --secondary-color: #FF6F59;
-    --third-color: #DBD3D8;
-    --background-color: #DBD3D8;
-    --resume-color: #FFFFFF;
-    --default-font-first: 'Montserrat';
-    --default-font-second: 'sans-serif';
-    --linkedin-color: #4875B4;
-    --devpost-color: #3ACCE6;
-    --menu-height: 47px;
+  --primary-color: #052f5f;
+  --secondary-color: #ff6f59;
+  --third-color: #dbd3d8;
+  --background-color: #dbd3d8;
+  --resume-color: #ffffff;
+  --default-font-first: "Montserrat";
+  --default-font-second: "sans-serif";
+  --linkedin-color: #4875b4;
+  --devpost-color: #3acce6;
+  --menu-height: 47px;
 }
 
 body {
-    font-family: var(--default-font-first), var(--default-font-second);
+  font-family: var(--default-font-first), var(--default-font-second);
 }
 
 .App {
@@ -33,129 +33,129 @@ body {
 }
 
 .bold-font {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .unweighted-font {
-    font-weight: lighter;
+  font-weight: lighter;
 }
 
 .resume-title {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .default-font {
-    font-family: var(--default-font-first), var(--default-font-second);
+  font-family: var(--default-font-first), var(--default-font-second);
 }
 
 .white-color {
-    color: white;
+  color: white;
 }
 
 .black-color {
-    color: black;
+  color: black;
 }
 
 .primary-color {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .secondary-color {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .background-color {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 }
 
 .resume-color {
-    background-color: var(--resume-color);
+  background-color: var(--resume-color);
 }
 
 .primary-background {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 .third-background {
-    background-color: var(--third-color);
+  background-color: var(--third-color);
 }
 
 .third-color {
-    color: var(--third-color);
+  color: var(--third-color);
 }
 
 .white-background {
-    background-color: white;
+  background-color: white;
 }
 
 .secondary-background {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 .black-background {
-    background-color: black;
+  background-color: black;
 }
 
 .linkedin-color {
-    color: var(--linkedin-color);
+  color: var(--linkedin-color);
 }
 
 .linkedin-background {
-    background-color: var(--linkedin-color);
+  background-color: var(--linkedin-color);
 }
 
 .devpost-color {
-    color: var(--devpost-color);
+  color: var(--devpost-color);
 }
 
 .devpost-background {
-    background-color: var(--devpost-color);
+  background-color: var(--devpost-color);
 }
 
 .horizontal-padding-small {
-    padding-left: 4px;
-    padding-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 .horizontal-padding {
-    padding-left: 8px;
-    padding-right: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .padding-left {
-    padding-left: 8px;
+  padding-left: 8px;
 }
 
 .padding-right {
-    padding-right: 8px;
+  padding-right: 8px;
 }
 
 .padding-left-small {
-    padding-left: 4px;
+  padding-left: 4px;
 }
 
 .padding-right-small {
-    padding-right: 4px;
+  padding-right: 4px;
 }
 
 .horizontal-margin {
-    margin: 0 2px;
+  margin: 0 2px;
 }
 
 .vertical-margin {
-    margin: 2px 0;
+  margin: 2px 0;
 }
 
 .all-margin {
-    margin: 2px 2px;
+  margin: 2px 2px;
 }
 
 .flex {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-menu {
@@ -182,11 +182,11 @@ body {
 }
 
 .flex-wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .ant-tabs-nav .ant-tabs-tab-active {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .ant-tabs-nav .ant-tabs-tab:hover {
@@ -198,110 +198,123 @@ body {
 }
 
 .ant-tabs-bar {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 .ant-tabs-top-bar {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 }
 
-/* Side Menu Color Override */ 
-.ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
-    background: var(--primary-color);
+/* Side Menu Color Override */
+.ant-steps-item-process
+  .ant-steps-item-icon
+  > .ant-steps-icon
+  .ant-steps-icon-dot {
+  background: var(--primary-color);
 }
 
 .center-screen {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.ant-menu-horizontal > .ant-menu-item:hover, .ant-menu-horizontal > .ant-menu-submenu:hover, .ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active, .ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open, .ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected {
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-submenu:hover,
+.ant-menu-horizontal > .ant-menu-item-active,
+.ant-menu-horizontal > .ant-menu-submenu-active,
+.ant-menu-horizontal > .ant-menu-item-open,
+.ant-menu-horizontal > .ant-menu-submenu-open,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-horizontal > .ant-menu-submenu-selected {
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
 }
 
 .ant-menu-horizontal {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .ant-layout-header {
-    line-height: normal;
+  line-height: normal;
 }
 
 .hidden-small {
-    display: initial;
+  display: initial;
 }
 
 @media screen and (max-width: 500px) {
-
-    .hidden-small { display: none}
-    .top-title { padding-top: calc(5% + 32px);}
+  .hidden-small {
+    display: none;
+  }
+  .top-title {
+    padding-top: calc(5% + 32px);
+  }
 }
 
 .top-margin {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 .fill-screen {
-    min-height: calc(100vh - 65px);
-    min-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3em;
-    background-color: var(--background-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3em;
+  background-color: var(--background-color);
 }
 
 .header {
-    height: 100%;
-    background-color: var(--background-color);
+  height: 100%;
+  background-color: var(--background-color);
 }
 
 .top-title {
-    margin-top: calc(5% + 16px);
+  margin-top: calc(5% + 16px);
 }
 
 .ant-btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 .menu-button {
-    position: absolute;
-    top: 1%;
-    left: 1%;
+  position: absolute;
+  top: 1%;
+  left: 1%;
 }
 
 .rounded-corners {
-    border-radius: 25px;
+  border-radius: 25px;
 }
 
 /*banner*/
-.banner-user{
+.banner-user {
   height: 220px;
 }
-.banner-user-elem{
+.banner-user-elem {
   text-align: center;
   color: #fff;
   position: relative;
   overflow: hidden;
 }
-.banner-user-elem .banner-user-title{
+.banner-user-elem .banner-user-title {
   font-size: 2rem;
   bottom: -34%;
 }
-.banner-user-elem .banner-user-text{
+.banner-user-elem .banner-user-text {
   bottom: -34%;
 }
-.banner-anim-elem .bg{
+.banner-anim-elem .bg {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -313,77 +326,79 @@ body {
 /* Start of CSS for v3 of website */
 
 .page-with-menu {
-    height: 100vh;
-    width: calc(100vw - 16px);
+  height: 100vh;
+  width: calc(100vw - 16px);
 }
 
 .screen-page {
-    width: calc(100vw - 16px);
-    height: 100vh;
+  width: calc(100vw - 16px);
+  height: 100vh;
 }
 
 .screen-width {
-    width: calc(100vw - 16px);
+  width: calc(100vw - 16px);
 }
 
 .screen-half-height {
-    min-height: 50vh;
+  min-height: 50vh;
 }
 
 .screen-height {
-    height: 100vh;
+  height: 100vh;
 }
 
 .fill-height {
-    height: 100%;
+  height: 100%;
 }
 
 .fill-width {
-    width: 100%;
+  width: 100%;
 }
 
 .title {
-    font-size: calc(32px + 2vw);
+  font-size: calc(32px + 2vw);
 }
 
 .sub-title {
-    font-size: calc(24px + 1vw);
+  font-size: calc(24px + 1vw);
 }
 
 .xxlarge-font {
-    font-size: xx-large;
+  font-size: xx-large;
 }
 .xlarge-font {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 .large-font {
-    font-size: large;
+  font-size: large;
 }
 
 .medium-font {
-    font-size: medium;
+  font-size: medium;
 }
 
 .small-font {
-    font-size: small;
+  font-size: small;
 }
 
 .icon-link {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 @media screen and (max-width: 800px) {
-
-    .desktop-display { display: none}
+  .desktop-display {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 800px) {
-
-    .mobile-display { display: none}
+  .mobile-display {
+    display: none;
+  }
 }
 
 .ant-btn:hover {
-    color: var(--secondary-color);
-    border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
