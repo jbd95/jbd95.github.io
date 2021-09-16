@@ -77,7 +77,6 @@
 .scroll-prompt-root {
   position: absolute;
   bottom: 1vh;
-  background: yellow;
 }
 
 .scroll-prompt-container {
@@ -97,7 +96,7 @@
 }
 
 .about {
-  background: #e39774;
+  background: #284b63;
   width: 100%;
   height: 100%;
 }
@@ -108,9 +107,11 @@
   font-weight: 600;
   padding: max(4vh, 4vw);
   padding-bottom: 0;
+  color: #eeeeee;
 }
 
 .about-text {
+  color: #eeeeee;
   padding: max(4vh, 4vw);
   padding-top: 32px;
   font-size: max(1.25vw, 16px);
@@ -118,7 +119,7 @@
 
 .text-link {
   font-weight: bold;
-  color: #3d0c11;
+  color: #e39774;
   text-decoration: none;
 }
 
@@ -140,10 +141,10 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #9d69a3;
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d0c11;
+  background: #e39774;
 }
