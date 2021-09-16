@@ -1,0 +1,149 @@
+.root {
+  position: absolute;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.welcome {
+  width: 100%;
+  height: 100%;
+  background-color: #284b63;
+  transition: background-color 2s;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.name {
+  font-size: max(2.5vw, 36px);
+  font-weight: 600;
+  color: #eeeeee;
+}
+
+.role {
+  font-size: max(2vw, 28px);
+  color: #eeeeee;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.github {
+  background-color: black;
+  color: white;
+}
+
+.linkedin {
+  background-color: #0072b2;
+  color: #eeeeee;
+}
+
+.pdf {
+  background-color: #e39774;
+  color: #eeeeee;
+}
+
+.link {
+  font-size: max(2vw, 28px);
+  margin: 8px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@keyframes scroll-prompt-animation {
+  0% {
+    bottom: 2vh;
+  }
+  75% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 2vh;
+  }
+}
+
+.scroll-prompt-root {
+  position: absolute;
+  bottom: 1vh;
+  background: yellow;
+}
+
+.scroll-prompt-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.scroll-prompt {
+  color: #eeeeeeb3;
+  font-size: max(1.5vw, 20px);
+  animation-name: scroll-prompt-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+.about {
+  background: #e39774;
+  width: 100%;
+  height: 100%;
+}
+
+.about-title {
+  border-top: 1vh solid #eeeeee;
+  font-size: max(2vw, 28px);
+  font-weight: 600;
+  padding: max(4vh, 4vw);
+  padding-bottom: 0;
+}
+
+.about-text {
+  padding: max(4vh, 4vw);
+  padding-top: 32px;
+  font-size: max(1.25vw, 16px);
+}
+
+.text-link {
+  font-weight: bold;
+  color: #3d0c11;
+  text-decoration: none;
+}
+
+.main-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #eeeeee;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9d69a3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3d0c11;
+}
