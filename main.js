@@ -1,5 +1,3 @@
-import "./style.css";
-
 // change the background color when the icons are hovered over
 const welcomePage = document.getElementById("welcome");
 console.log(welcomePage);
