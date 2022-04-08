@@ -1,0 +1,72 @@
+html {
+    --secondary-background-color: #F9F5FF;
+    --accent-color: #14248a;
+    --footer-bg-color: var(--secondary-background-color);
+    --footer-font-color: #28262C;
+    --canvas-background-color: #28262C;
+    --button-background: var(--accent-color);
+    --button-color: #F9F5FF;
+    --controls-background: var(--secondary-background-color);
+    --title-text-color: #F9F5FF;
+    --subtitle-text-color: #D4C2FC;
+    --animation-controls-background: var(--secondary-background-color);
+}
+
+.footer {
+    width: 100vw;
+    height: min(60px, 5vh);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: min(20px, 2.5vw);
+}
+
+.link {
+    text-decoration: underline dashed;
+    color: inherit;
+    font-weight: 600;
+}
+
+.accent {
+    color: var(--accent-color);
+}
+
+.canvas {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--canvas-background-color);
+    z-index: -1;
+}
+
+.animation-controls {
+    position: absolute;
+    right: 2vw;
+    bottom: calc(min(60px, 5vh) + 20px);
+    padding: 8px;
+    background: var(--animation-controls-background);
+}
+
+.animation-controls_title {
+    margin: 4px;
+}
+
+.animation-controls_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation-controls_button {
+    margin: 4px;
+    background-color: var(--button-background);
+    color: var(--button-color);
+}

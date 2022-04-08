@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="./fontawesome/css/all.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James Brady</title>
+</head>
+
+<body>
+    <div class="footer">
+        <div>
+            Check out my
+            <a class="link accent" href="https://github.com/jbd95" target="_blank" rel="noopener noreferrer">github</a> 
+            and
+            <a class="link accent" href="https://linkedin.com/in/jbd95" target="_blank" rel="noopener noreferrer">linkedin</a>
+        </div>
+    </div>
+    <div class="animation-controls">
+        <div class="animation-controls_title"> Animation Controls </div>
+        <div class="animation-controls_buttons">
+            <button class="animation-controls_button"> Reset </button>
+            <button class="animation-controls_button" onclick="animationControls_EnableDisable_clickHandler"> Disable </button>
+        </div>
+    </div>
+    <canvas class="canvas" id="canvas"></canvas>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
