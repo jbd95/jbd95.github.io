@@ -1,15 +1,23 @@
 import CanvasWrapper from "./lib/canvas.js";
 import Engine from "./lib/engine.js";
+import Physics from "./lib/physics.js";
 import Pixel from "./lib/pixel.js";
+import Renderer from "./lib/renderer.js"
+import Status from "./lib/status.js";
 
-const engine = new Engine();
+const canvas = CanvasWrapper.fromId('canvas')
+const status = new Status();
+const physics = new Physics(canvas, status);
+const renderer = new Renderer(canvas);
+
+const engine = new Engine(physics, renderer, status);
 
 const enableButton = document.getElementById('enabler')
 
 
 function animationControls_EnableDisable_clickHandler() {
     console.log("enable/disable clicked");
-  
+    console.log(engine.isRunning())
     if (engine.isRunning()) {
       engine.stop();
       enableButton.textContent = "Enable";
@@ -21,6 +29,7 @@ function animationControls_EnableDisable_clickHandler() {
   
   function animationControls_Reset_clickHandler() {
     console.log("reset clicked");
+    engine.reset();
   }
   
   document
@@ -30,9 +39,6 @@ function animationControls_EnableDisable_clickHandler() {
     .getElementById("reset")
     .addEventListener("click", animationControls_Reset_clickHandler);
   
-
-
-const canvas = CanvasWrapper.fromId('canvas')
 
 // class Test {
 //     update() {
@@ -44,11 +50,12 @@ const canvas = CanvasWrapper.fromId('canvas')
 //     }
 // }
 // const t = new Test();
-// engine.addObject(t);
+// engine.addComponent(t);
 
-const pixel = new Pixel(20, 20, 100, 100, 'white')
+for(let i = 20; i < 600; i += 20) {
+  for(let j = 20; j < 600; j += 20) {
+    engine.addComponent(new Pixel(i, j, 20, 20, 5, 'white'));
+  }
+}
 
-canvas.drawPixel(pixel.getPosition(), pixel.getWidth(), pixel.getHeight(), pixel.getColor())
-console.log(canvas.canvas.width)
-console.log(canvas.canvas.height)
-// engine.start();
+engine.start();

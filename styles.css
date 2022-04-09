@@ -14,7 +14,7 @@ html {
 
 .footer {
     width: 100vw;
-    height: min(60px, 5vh);
+    height: 48px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -23,7 +23,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: min(20px, 2.5vw);
+    font-size: 20px;
 }
 
 .link {
