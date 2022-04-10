@@ -50,9 +50,9 @@ function animationControls_EnableDisable_clickHandler() {
 // const t = new Test();
 // engine.addComponent(t);
 
-const font = new Font('Times New Roman', 24, canvas);
-font.addText('James Brady', 'white', 8);
-font.addText('Software Engineer', '#D4C2FC', 5);
+const font = new Font('Times New Roman', 30, canvas);
+font.addText('James Brady', 'white', 7);
+font.addText('Software Engineer', '#D4C2FC', 4);
 
 engine.addComponents(font.getPixels());
 engine.start();
