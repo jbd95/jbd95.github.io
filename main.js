@@ -17,8 +17,6 @@ const enableButton = document.getElementById('enabler')
 
 
 function animationControls_EnableDisable_clickHandler() {
-    console.log("enable/disable clicked");
-    console.log(engine.isRunning())
     if (engine.isRunning()) {
       engine.stop();
       enableButton.textContent = "Enable";
@@ -29,7 +27,6 @@ function animationControls_EnableDisable_clickHandler() {
   }
   
   function animationControls_Reset_clickHandler() {
-    console.log("reset clicked");
     engine.reset();
   }
   
@@ -58,5 +55,4 @@ font.addText('James Brady', 'white', 8);
 font.addText('Software Engineer', '#D4C2FC', 5);
 
 engine.addComponents(font.getPixels());
-console.log(physics.components)
 engine.start();
