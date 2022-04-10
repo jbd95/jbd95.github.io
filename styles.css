@@ -12,6 +12,10 @@ html {
     --animation-controls-background: var(--secondary-background-color);
 }
 
+body {
+    touch-action: none;
+}
+
 .footer {
     width: 100vw;
     height: 48px;
