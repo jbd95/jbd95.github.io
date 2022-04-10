@@ -52,10 +52,14 @@ html {
     bottom: calc(min(60px, 5vh) + 20px);
     padding: 8px;
     background: var(--animation-controls-background);
+    max-width: 200px;
 }
 
 .animation-controls_title {
     margin: 4px;
+    margin-top: 16px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .animation-controls_buttons {
@@ -69,4 +73,12 @@ html {
     margin: 4px;
     background-color: var(--button-background);
     color: var(--button-color);
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.semi-bold {
+    font-weight: 600;
 }

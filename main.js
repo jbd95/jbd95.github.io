@@ -1,5 +1,6 @@
 import CanvasWrapper from "./lib/canvas.js";
 import Engine from "./lib/engine.js";
+import Font from "./lib/font.js";
 import Physics from "./lib/physics.js";
 import Pixel from "./lib/pixel.js";
 import Renderer from "./lib/renderer.js"
@@ -52,10 +53,10 @@ function animationControls_EnableDisable_clickHandler() {
 // const t = new Test();
 // engine.addComponent(t);
 
-for(let i = 20; i < 600; i += 20) {
-  for(let j = 20; j < 600; j += 20) {
-    engine.addComponent(new Pixel(i, j, 20, 20, 5, 'white'));
-  }
-}
+const font = new Font('Times New Roman', 24, canvas);
+font.addText('James Brady', 'white', 8);
+font.addText('Software Engineer', '#D4C2FC', 5);
 
+engine.addComponents(font.getPixels());
+console.log(physics.components)
 engine.start();
