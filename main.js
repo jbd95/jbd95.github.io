@@ -45,10 +45,10 @@ const font = new Font('Times New Roman', 30, canvas);
 font.addText('James Brady', 'white', 7);
 font.addText('Software Engineer', '#D4C2FC', 4);
 
-const picture = new Picture('./resources/mav.png',
-  500, 500, 0.2, { x: 0, y: 0 }, canvas);
+// const picture = new Picture('./resources/water.jpg',
+//   window.innerWidth, window.innerHeight, 0.1, { x: 0, y: 0 }, canvas);
 
-//picture.calculate(components);
+// picture.calculate(components);
 
 components.addComponents(font.getPixels());
 engine.start();
