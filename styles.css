@@ -14,6 +14,11 @@ html {
 
 body {
     touch-action: none;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 .footer {
@@ -31,7 +36,6 @@ body {
 }
 
 .link {
-    text-decoration: underline dashed;
     color: inherit;
     font-weight: 600;
 }
@@ -77,6 +81,11 @@ body {
     margin: 4px;
     background-color: var(--button-background);
     color: var(--button-color);
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    cursor: pointer;
+    width: 80px;
 }
 
 .centered-text {
